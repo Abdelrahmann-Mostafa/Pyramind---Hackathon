@@ -12,13 +12,29 @@ import re
 import json
 import fitz  # PyMuPDF
 from pathlib import Path
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any
 
+from schemas import ProcessedChunk
+
+
+# ---------------------------------------------------------------------------
+# Regex patterns for structural and clinical metadata extraction
+# ---------------------------------------------------------------------------
 
 SECTION_HEADER_PATTERN = re.compile(
     r'^(?P<num>\d+\.\d+(\.\d+)?)\s+(?P<title>[A-Za-z0-9\s,\-\(\)\/\:]{3,80})',
     re.MULTILINE
 )
+
+# Detects implicit sub-section boundaries on headerless pages
+# (e.g. NICE CG124 pages 9-14 that lack numbered headers)
+IMPLICIT_BREAK_PATTERNS = [
+    re.compile(r'^Why the committee made the (?:2023 )?recommendation', re.I),
+    re.compile(r'^(?:\d+)\s+[A-Z][a-z].*(?:effectiveness|fracture|replacement)', re.I),
+    re.compile(r'^Update information', re.I),
+    re.compile(r'^Context\s*$', re.I),
+    re.compile(r'^Finding more information', re.I),
+]
 
 USPSTF_GRADE_PATTERN = re.compile(
     r'\b(Grade\s+[A-D]|I\s+statement|Grade\s+I)\b',
@@ -32,6 +48,13 @@ TARGET_POP_PATTERNS = [
     (re.compile(r'adults\s+(aged\s+)?18\s+and\s+over|hip\s+fracture', re.I), "Adults with acute hip fracture"),
 ]
 
+# Minimum character count for a chunk to be worth indexing
+MIN_CHUNK_CHARS = 100
+
+
+# ---------------------------------------------------------------------------
+# Helper functions
+# ---------------------------------------------------------------------------
 
 def detect_target_population(text: str, default_pop: str = "Adults") -> str:
     """Detects clinical target population from chunk text."""
@@ -39,6 +62,26 @@ def detect_target_population(text: str, default_pop: str = "Adults") -> str:
         if pattern.search(text):
             return pop_label
     return default_pop
+
+
+def is_front_matter(page_num: int, page_text: str) -> bool:
+    """
+    Detects front-matter / table-of-contents pages generically.
+    Checks for 'Contents' keyword in the first few pages of any document.
+    """
+    if page_num <= 3:
+        lower = page_text.lower()
+        if "contents" in lower and ("overview" in lower or "recommendations" in lower):
+            return True
+    return False
+
+
+def is_implicit_break(line: str) -> bool:
+    """Checks if a line signals an implicit sub-section boundary."""
+    for pattern in IMPLICIT_BREAK_PATTERNS:
+        if pattern.match(line):
+            return True
+    return False
 
 
 def extract_pdf_pages(file_path: str) -> List[Dict[str, Any]]:
@@ -64,8 +107,8 @@ def extract_pdf_pages(file_path: str) -> List[Dict[str, Any]]:
 
 def split_text_with_overlap(
     text: str, 
-    max_chars: int = 1800, 
-    overlap_chars: int = 250
+    max_chars: int = 600, 
+    overlap_chars: int = 100
 ) -> List[str]:
     """
     Splits long section text into overlapping windows without severing paragraphs or sentences.
@@ -108,14 +151,86 @@ def split_text_with_overlap(
     return chunks
 
 
+def make_embedding_text(section_num: str, section_title: str, content: str) -> str:
+    """
+    Creates a search-optimized text representation by prefixing with section context.
+    This improves embedding similarity for section-specific queries.
+    """
+    return f"[Section {section_num}: {section_title}] {content}"
+
+
+def make_chunk_id(doc_stem: str, page_num: int, counter: int) -> str:
+    """Generates a deterministic, collision-resistant chunk ID using the full document stem."""
+    return f"{doc_stem}_p{page_num:02d}_c{counter:03d}"
+
+
+# ---------------------------------------------------------------------------
+# Core chunking engine
+# ---------------------------------------------------------------------------
+
+def _flush_block(
+    block_lines: List[str],
+    section_num: str,
+    section_title: str,
+    page_num: int,
+    filename: str,
+    doc_stem: str,
+    chunk_counter: int,
+    max_chunk_chars: int,
+    overlap_chars: int,
+    output_list: List[Dict[str, Any]],
+) -> int:
+    """
+    Flushes accumulated block lines into one or more validated chunks.
+    Returns the updated chunk_counter.
+    """
+    block_text = "\n".join(block_lines).strip()
+    if len(block_text) < MIN_CHUNK_CHARS:
+        return chunk_counter
+
+    # Extract clinical metadata
+    grade_match = USPSTF_GRADE_PATTERN.search(block_text)
+    evidence_grade = grade_match.group(0).title() if grade_match else "N/A"
+    pop = detect_target_population(block_text)
+
+    sub_texts = split_text_with_overlap(block_text, max_chunk_chars, overlap_chars)
+    for sub_t in sub_texts:
+        if len(sub_t.strip()) < MIN_CHUNK_CHARS:
+            continue
+
+        chunk_counter += 1
+        chunk_id = make_chunk_id(doc_stem, page_num, chunk_counter)
+        embedding_text = make_embedding_text(section_num, section_title, sub_t)
+
+        # Validate through Pydantic schema
+        chunk = ProcessedChunk(
+            chunk_id=chunk_id,
+            content=sub_t,
+            embedding_text=embedding_text,
+            section_number=section_num,
+            section_title=section_title,
+            page_number=page_num,
+            document_name=filename,
+            evidence_grade=evidence_grade,
+            target_population=pop,
+            char_count=len(sub_t),
+        )
+        output_list.append(chunk.model_dump())
+
+    return chunk_counter
+
+
 def section_aware_chunker(
     pages_data: List[Dict[str, Any]], 
-    max_chunk_chars: int = 1800,
-    overlap_chars: int = 250
+    max_chunk_chars: int = 600,
+    overlap_chars: int = 100
 ) -> List[Dict[str, Any]]:
     """
     Parses pages and produces section-aware chunks bound to exact section hierarchies,
     page numbers, document names, and evidence grades.
+    
+    Handles both explicit section headers (numbered like '1.3 Analgesia') and
+    implicit sub-section breaks (e.g. 'Why the committee made the recommendation').
     """
     processed_chunks = []
     current_section_num = "0.0"
@@ -124,14 +239,15 @@ def section_aware_chunker(
 
     for page in pages_data:
         filename = page["filename"]
+        doc_stem = Path(filename).stem
         page_num = page["page_number"]
         page_text = page["text"]
 
         if not page_text:
             continue
 
-        # Check if page is front-matter / contents
-        if page_num <= 3 and "Contents" in page_text and filename == "NICE_CG124.pdf":
+        # Generic front-matter / contents detection
+        if is_front_matter(page_num, page_text):
             continue
 
         # Split page into structural blocks or paragraphs
@@ -146,63 +262,44 @@ def section_aware_chunker(
             # Check for explicit section header match (e.g., '1.3 Analgesia' or '2.1 Risk Assessment')
             sec_match = SECTION_HEADER_PATTERN.match(trimmed)
             if sec_match:
-                # Flush previous block if exists
-                if current_block:
-                    block_text = "\n".join(current_block).strip()
-                    if len(block_text) > 40:
-                        # Extract evidence grade
-                        grade_match = USPSTF_GRADE_PATTERN.search(block_text)
-                        evidence_grade = grade_match.group(0).title() if grade_match else "N/A"
-                        pop = detect_target_population(block_text)
-
-                        sub_texts = split_text_with_overlap(block_text, max_chunk_chars, overlap_chars)
-                        for sub_t in sub_texts:
-                            chunk_counter += 1
-                            processed_chunks.append({
-                                "chunk_id": f"{filename[:8]}_p{page_num:02d}_c{chunk_counter:03d}",
-                                "content": sub_t,
-                                "section_number": current_section_num,
-                                "section_title": current_section_title,
-                                "page_number": page_num,
-                                "document_name": filename,
-                                "evidence_grade": evidence_grade,
-                                "target_population": pop,
-                                "char_count": len(sub_t)
-                            })
-                    current_block = []
-
+                # Flush previous block
+                chunk_counter = _flush_block(
+                    current_block, current_section_num, current_section_title,
+                    page_num, filename, doc_stem, chunk_counter,
+                    max_chunk_chars, overlap_chars, processed_chunks,
+                )
+                current_block = []
                 current_section_num = sec_match.group("num").strip()
                 current_section_title = sec_match.group("title").strip()
                 continue
 
+            # Check for implicit sub-section break (headerless pages)
+            if is_implicit_break(trimmed) and current_block:
+                chunk_counter = _flush_block(
+                    current_block, current_section_num, current_section_title,
+                    page_num, filename, doc_stem, chunk_counter,
+                    max_chunk_chars, overlap_chars, processed_chunks,
+                )
+                current_block = []
+                # Keep the break line as the start of the next block
+                # (it provides context for the upcoming content)
+
             current_block.append(trimmed)
 
         # Flush remaining block for this page
-        if current_block:
-            block_text = "\n".join(current_block).strip()
-            if len(block_text) > 80:
-                grade_match = USPSTF_GRADE_PATTERN.search(block_text)
-                evidence_grade = grade_match.group(0).title() if grade_match else "N/A"
-                pop = detect_target_population(block_text)
-
-                sub_texts = split_text_with_overlap(block_text, max_chunk_chars, overlap_chars)
-                for sub_t in sub_texts:
-                    if len(sub_t.strip()) > 80:
-                        chunk_counter += 1
-                        processed_chunks.append({
-                            "chunk_id": f"{filename[:8]}_p{page_num:02d}_c{chunk_counter:03d}",
-                            "content": sub_t,
-                            "section_number": current_section_num,
-                            "section_title": current_section_title,
-                            "page_number": page_num,
-                            "document_name": filename,
-                            "evidence_grade": evidence_grade,
-                            "target_population": pop,
-                            "char_count": len(sub_t)
-                        })
+        chunk_counter = _flush_block(
+            current_block, current_section_num, current_section_title,
+            page_num, filename, doc_stem, chunk_counter,
+            max_chunk_chars, overlap_chars, processed_chunks,
+        )
+        current_block = []
 
     return processed_chunks
 
+
+# ---------------------------------------------------------------------------
+# Pipeline orchestrator
+# ---------------------------------------------------------------------------
 
 def run_ingestion_pipeline(
     pdf_dir: str = "data/guidelines", 
@@ -251,3 +348,6 @@ if __name__ == "__main__":
     for sample in chunks[:3]:
         print(json.dumps(sample, indent=2))
         print("-" * 50)
+
+
+
