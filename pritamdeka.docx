@@ -1,0 +1,20 @@
+pritamdeka/S-PubMedBert-MS-MARCO
+Because of its specific architecture, it natively supports and excels in the following RAG system types and architectures:
+1. Naive and Advanced Dense Retrieval RAG
+•	What it supports: Standard semantic search. This model was created by taking Microsoft's BiomedNLP-PubMedBERT and fine-tuning it using the sentence-transformers framework on the MS-MARCO dataset.
+
+Why it fits: It is specifically optimized for passage-ranking tasks in the medical and health domain. It excels at aligning user medical queries with relevant document text chunks
+NOTE: The MS MARCO (Microsoft Machine Reading Comprehension) dataset is a massive, widely used collection of datasets designed to train and benchmark deep learning systems in web search and information retrieval
+2. Hybrid RAG (Dense + Lexical Search)
+•	What it supports: Systems combining vector search with keyword search algorithms like BM25.
+•	Why it fits: Smaller domain-specific models like PubMedBERT can occasionally struggle with hyper-specific medical IDs or exact spelling matches. In highly optimized healthcare pipelines, developers frequently use this model as the dense component of a Hybrid RAG architecture to balance contextual semantics with exact keyword precision.
+
+3. HIPAA-Compliant / Local RAG Systems
+•	What it supports: Fully offline, local, or on-premise RAG pipelines.
+•	Why it fits: Because it is a lightweight, open-source 110M parameter model (~439 MB), it requires virtually no computing power compared to giant commercial APIs. It allows hospitals and research centers to run their entire data-retrieval pipeline locally on consumer hardware, ensuring zero external data sharing to maintain HIPAA compliance.
+
+
+4. Multi-Agent Biomedical RAG Systems
+•	What it supports: Dynamic, tool-using AI setups (like fetching live evidence from PubMed or navigating knowledge graphs).
+•	Why it fits: It provides low-latency vector embeddings (~15ms). This makes it ideal for autonomous agents that need to execute several query loops consecutively without slowing down the user experience. [1, 2, 3, 4, 5]
+
