@@ -64,8 +64,8 @@ def extract_pdf_pages(file_path: str) -> List[Dict[str, Any]]:
 
 def split_text_with_overlap(
     text: str, 
-    max_chars: int = 1800, 
-    overlap_chars: int = 250
+    max_chars: int = 900, 
+    overlap_chars: int = 150
 ) -> List[str]:
     """
     Splits long section text into overlapping windows without severing paragraphs or sentences.
@@ -110,8 +110,8 @@ def split_text_with_overlap(
 
 def section_aware_chunker(
     pages_data: List[Dict[str, Any]], 
-    max_chunk_chars: int = 1800,
-    overlap_chars: int = 250
+    max_chunk_chars: int = 900,
+    overlap_chars: int = 150
 ) -> List[Dict[str, Any]]:
     """
     Parses pages and produces section-aware chunks bound to exact section hierarchies,
