@@ -1,3 +1,38 @@
+"""
+chunking.py
+-----------
+Step 2 of the RAG pipeline.
+
+Reads data/raw_pages.json (from ingestion.py) and splits each page's
+text into overlapping fixed-size chunks:
+    CHUNK_SIZE   = 600 characters
+    CHUNK_OVERLAP = 150 characters
+
+Chunking is done PER PAGE (never across document boundaries, and section
+metadata for a chunk is always inherited from the page it was cut from),
+so every chunk stays attributable to a single page/section.
+
+Each chunk record follows this schema:
+{
+    "chunk_id":          "NG38_p05_c00",
+    "document_name":     "Fractures (non-complex): assessment and management",
+    "document_code":     "NG38",
+    "section_number":    "1.1",
+    "section_title":     "Initial pain management and immobilisation",
+    "page_number":       5,
+    "target_population": "Adults (16+)",
+    "evidence_grade":    "2016",
+    "char_count":        600,
+    "content":           "<raw chunk text>",
+    "embedding_text":    "<document_name> | <section_number> <section_title>\n<raw chunk text>"
+}
+
+Output: data/processed_chunks.json
+
+Run:
+    python src/chunking.py
+"""
+
 import json
 from pathlib import Path
 
