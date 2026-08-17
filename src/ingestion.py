@@ -301,6 +301,9 @@ def section_aware_chunker(
 # Pipeline orchestrator
 # ---------------------------------------------------------------------------
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
+
 def run_ingestion_pipeline(
     pdf_dir: str = "data/guidelines", 
     output_file: str = "data/processed_chunks.json"
@@ -309,12 +312,19 @@ def run_ingestion_pipeline(
     Executes the end-to-end ingestion pipeline over all guideline PDFs.
     """
     pdf_dir_path = Path(pdf_dir)
+    if not pdf_dir_path.is_absolute():
+        pdf_dir_path = REPO_ROOT / pdf_dir
+
+    output_path = Path(output_file)
+    if not output_path.is_absolute():
+        output_path = REPO_ROOT / output_file
+
     os.makedirs(pdf_dir_path, exist_ok=True)
-    os.makedirs(Path(output_file).parent, exist_ok=True)
+    os.makedirs(output_path.parent, exist_ok=True)
 
     pdf_files = sorted(list(pdf_dir_path.glob("*.pdf")))
     if not pdf_files:
-        raise FileNotFoundError(f"No PDF guideline files found in directory: {pdf_dir}")
+        raise FileNotFoundError(f"No PDF guideline files found in directory: {pdf_dir_path}")
 
     all_chunks = []
     print("=" * 80)
@@ -331,12 +341,12 @@ def run_ingestion_pipeline(
         all_chunks.extend(chunks)
 
     # Save to JSON
-    with open(output_file, "w", encoding="utf-8") as f:
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(all_chunks, f, indent=2, ensure_ascii=False)
 
     print("\n" + "=" * 80)
     print(f"PIPELINE COMPLETE: Successfully processed and indexed {len(all_chunks)} chunks.")
-    print(f"Output saved to: {output_file}")
+    print(f"Output saved to: {output_path}")
     print("=" * 80)
 
     return all_chunks
