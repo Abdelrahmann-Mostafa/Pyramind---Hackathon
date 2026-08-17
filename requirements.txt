@@ -1,0 +1,36 @@
+# ==============================================================================
+# Clinical Decision Support (CDS) Lite - Dependencies
+# ==============================================================================
+
+# PDF Parsing & Ingestion
+PyMuPDF>=1.24.0
+
+# Data Validation & Schema Modeling
+pydantic>=2.7.0
+pydantic-settings>=2.0.0
+
+# Embedding & Sentence Transformers (PubMedBERT / Biomedical)
+sentence-transformers>=3.0.0
+torch>=2.0.0
+transformers>=4.40.0
+
+# Numerical Computing & Similarity
+numpy>=1.26.0
+scikit-learn>=1.4.0
+scipy>=1.12.0
+
+# Vector Database (ChromaDB / Qdrant)
+chromadb>=0.5.0
+qdrant-client>=1.9.0
+
+# LLM Providers & Environment Management
+openai>=1.30.0
+google-genai>=0.1.0
+python-dotenv>=1.0.0
+
+# Frontend & Clinical UI
+streamlit>=1.35.0
+
+# Utilities
+tqdm>=4.66.0
+rich>=13.7.0
