@@ -1,49 +1,100 @@
-from typing import List, Optional, Literal
-from pydantic import BaseModel, Field
+import json
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = PROJECT_ROOT / "data"
+INPUT_FILE = DATA_DIR / "raw_pages.json"
+OUTPUT_FILE = DATA_DIR / "processed_chunks.json"
+
+CHUNK_SIZE = 600
+CHUNK_OVERLAP = 150
+MIN_CHUNK_CHARS = 40  # drop tiny trailing fragments (e.g. lone page footers)
 
 
-class Citation(BaseModel):
-    document_name: str = Field(description="Exact document filename (e.g., NICE_CG124.pdf, USPSTF_Osteoporosis.pdf)")
-    section_number: str = Field(description="Numerical guideline section identifier (e.g., '1.3', '1.6', '2.1')")
-    section_title: str = Field(description="Title heading of the guideline section")
-    page_number: int = Field(description="Physical page index in the source PDF (1-indexed)")
-    evidence_grade: str = Field(
-        default="N/A", 
-        description="Official USPSTF recommendation grade (Grade A, B, C, D, I statement) or NICE recommendation marker"
-    )
-    target_population: Optional[str] = Field(default="Adults", description="Demographic scope specified by the snippet")
+def split_text(text: str, chunk_size: int, overlap: int) -> list:
+    """Fixed-size sliding-window splitter with overlap.
+    Tries to break on whitespace near the boundary to avoid cutting mid-word."""
+    text = " ".join(text.split())  # normalize whitespace
+    if len(text) <= chunk_size:
+        return [text] if text.strip() else []
+
+    chunks = []
+    start = 0
+    step = chunk_size - overlap
+    text_len = len(text)
+
+    while start < text_len:
+        end = min(start + chunk_size, text_len)
+
+        # nudge the cut point to the nearest preceding space, if one exists
+        # within a small window, so we don't split a word in half
+        if end < text_len:
+            nudge = text.rfind(" ", start + int(chunk_size * 0.8), end)
+            if nudge != -1:
+                end = nudge
+
+        chunk = text[start:end].strip()
+        if len(chunk) >= MIN_CHUNK_CHARS:
+            chunks.append(chunk)
+
+        if end >= text_len:
+            break
+        start += step
+
+    return chunks
 
 
-class ChunkMetadata(BaseModel):
-    document_name: str
-    section_number: str
-    section_title: str
-    page_number: int
-    evidence_grade: str = "N/A"
-    target_population: str = "General / Adults"
-    chunk_index: int = 0
+def build_chunks(pages: list) -> list:
+    all_chunks = []
+
+    for page in pages:
+        page_chunks = split_text(page["text"], CHUNK_SIZE, CHUNK_OVERLAP)
+
+        for i, chunk_text in enumerate(page_chunks):
+            chunk_id = f"{page['document_code']}_p{page['page_number']:02d}_c{i:02d}"
+
+            evidence_grade = ", ".join(page["recommendation_years"]) or "N/A"
+
+            embedding_text = (
+                f"{page['document_name']} ({page['document_code']}) | "
+                f"Section {page['section_number']}: {page['section_title']}\n"
+                f"{chunk_text}"
+            )
+
+            all_chunks.append({
+                "chunk_id": chunk_id,
+                "document_name": page["document_name"],
+                "document_code": page["document_code"],
+                "section_number": page["section_number"],
+                "section_title": page["section_title"],
+                "page_number": page["page_number"],
+                "target_population": page["target_population"],
+                "evidence_grade": evidence_grade,
+                "char_count": len(chunk_text),
+                "content": chunk_text,
+                "embedding_text": embedding_text,
+            })
+
+    return all_chunks
 
 
-class ProcessedChunk(BaseModel):
-    chunk_id: str
-    content: str
-    section_number: str
-    section_title: str
-    page_number: int
-    document_name: str
-    evidence_grade: str = "N/A"
-    target_population: str = "General / Adults"
-    char_count: int
+def main():
+    if not INPUT_FILE.exists():
+        raise FileNotFoundError(f"{INPUT_FILE} not found — run src/ingestion.py first.")
+
+    with open(INPUT_FILE, "r", encoding="utf-8") as f:
+        pages = json.load(f)
+
+    chunks = build_chunks(pages)
+
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(chunks, f, indent=2, ensure_ascii=False)
+
+    sizes = [c["char_count"] for c in chunks]
+    print(f"[+] Built {len(chunks)} chunks from {len(pages)} pages")
+    print(f"[+] Chunk size stats -> min: {min(sizes)}, max: {max(sizes)}, avg: {sum(sizes)//len(sizes)}")
+    print(f"[+] Wrote {OUTPUT_FILE}")
 
 
-class ClinicalRecommendationItem(BaseModel):
-    clinical_guidance: str = Field(description="Synthesized clinical directive grounded strictly in context")
-    supporting_direct_excerpt: str = Field(description="Verbatim text quote from the retrieved document")
-    citation: Citation
-
-
-class CDSResponseSchema(BaseModel):
-    query_status: Literal["SUCCESS", "REFUSED"] = Field(description="Status: 'SUCCESS' or 'REFUSED'")
-    refusal_reason: Optional[str] = Field(default=None, description="Detailed reason if query was refused")
-    confidence_score: Optional[float] = Field(default=None, description="Calibrated retrieval confidence score (0.0 to 1.0)")
-    recommendations: List[ClinicalRecommendationItem] = Field(default_factory=list)
+if __name__ == "__main__":
+    main()
