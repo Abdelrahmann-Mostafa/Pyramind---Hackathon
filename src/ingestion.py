@@ -28,24 +28,33 @@ import pdfplumber
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
+GUIDELINES_DIR = DATA_DIR / "guidelines"
 OUTPUT_FILE = DATA_DIR / "raw_pages.json"
 
 # Register every source PDF here. Add more guidelines by appending to this list.
 SOURCE_DOCUMENTS = [
     {
-        "path": DATA_DIR / "NG38_fractures_noncomplex.pdf",
-        "document_name": "Fractures (non-complex): assessment and management",
-        "document_code": "NG38",
+        "path": GUIDELINES_DIR / "NICE_CG124.pdf",
+        "document_name": "Hip fracture: management",
+        "document_code": "CG124",
         "publisher": "NICE",
-        "published_date": "2016-02-17",
+        "published_date": "2011-06-22",
+        "last_updated": "2023-01-06",
     },
     {
-        "path": DATA_DIR / "NG37_fractures_complex.pdf",
+        "path": GUIDELINES_DIR / "fractures-complex-assessment-and-management-pdf-1837397402053.pdf",
         "document_name": "Fractures (complex): assessment and management",
         "document_code": "NG37",
         "publisher": "NICE",
         "published_date": "2016-02-17",
         "last_updated": "2022-11-23",
+    },
+    {
+        "path": GUIDELINES_DIR / "fractures-noncomplex-assessment-and-management-pdf-1837399081669.pdf",
+        "document_name": "Fractures (non-complex): assessment and management",
+        "document_code": "NG38",
+        "publisher": "NICE",
+        "published_date": "2016-02-17",
     },
 ]
 
