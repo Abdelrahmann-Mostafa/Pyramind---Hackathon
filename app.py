@@ -1,7 +1,11 @@
 import streamlit as st
 import os
+import sys
 import time
 import json
+
+# Ensure the app can find the 'src' module when run from outside the project directory
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from src.generation_layer import RAGPipeline
 
 # ==============================================================================
