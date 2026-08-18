@@ -1,0 +1,1025 @@
+[
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 1,
+    "section_number": "",
+    "section_title": "Front matter",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Hip fracture: management Clinical guideline Published: 22 June 2011 Last updated: 6 January 2023"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 2,
+    "section_number": "",
+    "section_title": "Front matter",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Hip fracture: management (CG124) Your responsibility The recommendations in this guideline represent the view of NICE, arrived at after careful consideration of the evidence available. When exercising their judgement, professionals and practitioners are expected to take this guideline fully into account, alongside the individual needs, preferences and values of their patients or the people using their service. It is not mandatory to apply the recommendations, and the guideline does not override the responsibility to make decisions appropriate to the circumstances of the individual, in consultation with them and their families and carers or guardian. All problems (adverse events) related to a medicine or medical device used for treatment or in a procedure should be reported to the Medicines and Healthcare products Regulatory Agency using the Yellow Card Scheme. Local commissioners and providers of healthcare have a responsibility to enable the guideline to be applied when individual professionals and people using services wish to use it. They should do so in the context of local and national priorities for funding and developing services, and in light of their duties to have due regard to the need to eliminate unlawful discrimination, to advance equality of opportunity and to reduce health inequalities. Nothing in this guideline should be interpreted in a way that would be inconsistent with complying with those duties. Commissioners and providers have a responsibility to promote an environmentally sustainable health and care system and should assess and reduce the environmental impact of implementing NICE recommendations wherever possible. 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 4,
+    "section_number": "",
+    "section_title": "Front matter",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Hip fracture: management (CG124) This guideline is the basis of QS16. Overview This guideline covers managing hip fracture in adults. It aims to improve care from the time people aged 18 and over are admitted to hospital through to when they return to the community. Recommendations emphasise the importance of early surgery and coordinating care through a multidisciplinary Hip Fracture Programme to help people recover faster and regain their mobility. NICE has also produced a guideline on osteoporosis: assessing the risk of fragility fracture. Who is it for? Healthcare professionals Commissioners and providers Adults with hip fracture and their families and carers. 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 5,
+    "section_number": "",
+    "section_title": "Front matter",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Hip fracture: management (CG124) Using this guideline People have the right to be involved in discussions and make informed decisions about their care, as described in NICE's information about shared decision making. Healthcare practitioners should follow our general guidelines for people delivering care: Decision-making and mental capacity Medicines adherence Medicines optimisation Multimorbidity Patient experience in adult NHS services Shared decision making Making decisions using NICE guidelines explains how we use words to show the strength (or certainty) of our recommendations, and has information about prescribing medicines (including off-label use), professional guidelines, standards and laws (including on consent and mental capacity), and safeguarding. 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 6,
+    "section_number": "1.1",
+    "section_title": "Imaging options in occult hip fracture",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011",
+      "2011, amended 2014"
+    ],
+    "text": "Hip fracture: management (CG124) Recommendations Some aspects of hip fracture management are already covered by NICE guidance and are therefore outside the scope of this guideline. To ensure comprehensive management and continuity, the following NICE guidance should be referred to when developing a complete programme of care for each patient: NICE technology appraisal guidance on preventing osteoporotic fragility fractures in postmenopausal women (alendronate, denosumab, etidronate, risedronate, raloxifene, strontium ranelate and teriparatide). NICE guidelines on falls in older people, pressure ulcers, nutrition support for adults, dementia, surgical site infections, venous thromboembolism in over 16s, delirium and osteoporosis: assessing the risk of fragility fracture. 1.1 Imaging options in occult hip fracture 1.1.1 Offer MRI if hip fracture is suspected despite negative X‐rays of the hip of an adequate standard. If MRI is not available within 24 hours or is contraindicated, consider CT. [2011, amended 2014] 1.2 Timing of surgery 1.2.1 Perform surgery on the day of, or the day after, admission. [2011] 1.2.2 Identify and treat correctable comorbidities immediately so that surgery is not delayed by: anaemia anticoagulation volume depletion electrolyte imbalance 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 7,
+    "section_number": "1.3",
+    "section_title": "Analgesia",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011"
+    ],
+    "text": "Hip fracture: management (CG124) uncontrolled diabetes uncontrolled heart failure correctable cardiac arrhythmia or ischaemia acute chest infection exacerbation of chronic chest conditions. [2011] 1.3 Analgesia 1.3.1 Assess the person's pain: immediately upon presentation at hospital and within 30 minutes of administering initial analgesia and hourly until settled on the ward and regularly as part of routine nursing observations throughout admission. [2011] 1.3.2 Offer immediate analgesia to people presenting at hospital with suspected hip fracture, including people with cognitive impairment. [2011] 1.3.3 Ensure analgesia is sufficient to allow movements necessary for investigations (as indicated by the ability to tolerate passive external rotation of the leg), and for nursing care and rehabilitation. [2011] 1.3.4 Offer paracetamol every 6 hours preoperatively unless contraindicated. [2011] 1.3.5 Offer additional opioids if paracetamol alone does not provide sufficient preoperative pain relief. [2011] 1.3.6 Consider adding nerve blocks if paracetamol and opioids do not provide sufficient preoperative pain relief, or to limit opioid dosage. Nerve blocks should be administered by trained personnel. Do not use nerve blocks as a substitute for early surgery. [2011] 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 8,
+    "section_number": "1.4",
+    "section_title": "Anaesthesia",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011",
+      "2017"
+    ],
+    "text": "Hip fracture: management (CG124) 1.3.7 Offer paracetamol every 6 hours postoperatively unless contraindicated. [2011] 1.3.8 Offer additional immediate-release opioids if paracetamol alone does not provide sufficient postoperative pain relief. [2011] 1.3.9 Non-steroidal anti-inflammatory drugs (NSAIDs) are not recommended. [2011] 1.4 Anaesthesia 1.4.1 Offer people a choice of spinal or general anaesthesia after discussing the risks and benefits. [2011] 1.4.2 Consider intraoperative nerve blocks for all people undergoing surgery. [2011] 1.5 Planning the theatre team 1.5.1 Schedule hip fracture surgery on a planned trauma list. [2011] 1.5.2 Consultants or senior staff should supervise trainee and junior members of the anaesthesia, surgical and theatre teams when they carry out hip fracture procedures. [2011] 1.6 Surgical procedures 1.6.1 Operate on people with the aim to allow them to fully weight bear (without restriction) in the immediate postoperative period. [2011] 1.6.2 Offer replacement arthroplasty (total hip replacement or hemiarthroplasty) to people with a displaced intracapsular hip fracture. [2017] 1.6.3 Consider total hip replacement rather than hemiarthroplasty for people with a displaced intracapsular hip fracture who: 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 9,
+    "section_number": "1.4",
+    "section_title": "Anaesthesia",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2023"
+    ],
+    "text": "Hip fracture: management (CG124) were able to walk independently out of doors with no more than the use of a stick and do not have a condition or comorbidity that makes the procedure unsuitable for them and are expected to be able to carry out activities of daily living independently beyond 2 years. [2023] 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 10,
+    "section_number": "1.4",
+    "section_title": "Anaesthesia",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Hip fracture: management (CG124) Why the committee made the 2023 recommendation The committee discussed the clinical evidence on total hip arthroplasty versus hemiarthroplasty. They agreed that although some studies showed greater benefits for total hip arthroplasty, this was not clinically or statistically significant for most outcomes. However, a combination of the clinical evidence and the health economic model developed as part of the guideline indicated that total hip arthroplasty may have some benefits and be more cost effective than hemiarthroplasty beyond 2 years. The committee noted that although recommendation 1.6.2 states that clinicians should offer arthroplasty (either total hip arthroplasty or hemiarthroplasty) to people with a displaced intracapsular hip fracture, hemiarthroplasty tends to be used more often than total hip arthroplasty. The evidence was not strong enough for them to recommend total hip arthroplasty for everyone with a displaced intracapsular fracture. Based on their clinical knowledge and experience, the committee discussed how the long-term outcomes considered in the health economic model were important but may not be relevant to some people. For example, older people may not live long enough to experience the long-term benefits of total hip arthroplasty, and people who are not very mobile may be less concerned about the potential consequences of having a hemiarthroplasty, such as wear on the acetabulum. The committee agreed that hemiarthroplasty was a less complicated procedure than total hip arthroplasty and could result in lower dislocation rates and less blood loss. The health economic evidence on the long-term cost effectiveness and potential clinical benefits of total hip arthroplasty led the committee to recommend that clinicians should consider the procedure for those who are most likely to benefit from it beyond 2 years. The list of criteria in the recommendation represents the past (a person's level of independence before the fracture), present (how they currently present in hospital and if they are fit for the procedure on that day) and future (how much they are likely to benefit beyond 2 years). Including this list gives clinicians more discretion over who to offer total hip arthroplasty to and prevents the procedure being offered to some people who may get the same, or more, benefit from hemiarthroplasty. The committee discussed how some people with significant cognitive impairments may be at increased risk of dislocations and could be less likely to benefit from total 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 11,
+    "section_number": "1.4",
+    "section_title": "Anaesthesia",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011"
+    ],
+    "text": "Hip fracture: management (CG124) hip arthroplasty. However, they agreed that the evidence for this was too limited to make a specific recommendation for this population. The risk of dislocation can also vary depending on the severity and type of cognitive impairment, or how much support the person has. They agreed that cognitive impairment is one of many important comorbidities that should be considered when making treatment decisions. It is more important for clinicians to think about comorbidities in the context of functionality rather than whether or not a person has them. The committee also agreed that decisions about whether someone is likely to benefit most from total hip arthroplasty or hemiarthroplasty would normally be made as part of a multidisciplinary team. The committee discussed the potential long-term benefit of total hip arthroplasty in specific groups of people, in particular younger age groups with fewer or less severe comorbidities. As the evidence did not provide much long-term data, and results were not reported for different age categories, it was agreed that further research should be carried out to inform future recommendations. A recommendation for research on long-term effectiveness of total hip replacement was therefore included to highlight the importance of comparing the effectiveness of total hip arthroplasty with hemiarthroplasty in the long term and determining the effect of each type of arthroplasty on different population subgroups. Full details of the evidence and the committee's discussion are in evidence review B: total hip replacement versus hemiarthroplasty. How the 2023 recommendations might affect practice The recommendation allows clinicians to use their discretion in deciding who is offered total hip arthroplasty. It should prevent people with mild forms of cognitive impairment being excluded from total hip arthroplasty unnecessarily. As more data becomes available on the long-term benefits of total hip arthroplasty in specific subgroups, there may be an increase in the number of people who are considered for total hip arthroplasty. 1.6.4 Use cemented implants in people undergoing surgery with arthroplasty. [2011] 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 12,
+    "section_number": "1.4",
+    "section_title": "Anaesthesia",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2023"
+    ],
+    "text": "Hip fracture: management (CG124) The Association of Anaesthetists of Great Britain and Ireland, British Orthopaedic Association and British Geriatric Society have produced a safety guideline on reducing the risk from cemented hemiarthroplasty for hip fracture. The guideline is not NICE accredited. 1.6.5 Hospitals should aim to use a single type of cemented femoral component for hemiarthroplasties as standard treatment for displaced intracapsular hip fracture management. [2023] 1.6.6 If equivalent cemented femoral component designs are available, organisations should take into account overall costs, including training needs, and how familiar the team is with the component. [2023] 1.6.7 Record long-term data on hemiarthroplasties, including patient-reported outcomes and adverse events, for submission to a national registry. [2023] 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 13,
+    "section_number": "1.4",
+    "section_title": "Anaesthesia",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Hip fracture: management (CG124) Why the committee made the 2023 recommendations The committee discussed the evidence on people who had been given Thompson, Exeter/Unitrax or Exeter Trauma Stem (ETS) components and agreed that health‐related quality of life, mobility, mortality, unplanned return to theatre and adverse-event outcomes were similar across all groups. The committee noted that although there were no cost-effectiveness studies, there was a large amount of variability in femoral component costs across the country for a given type of femoral component and between different types of femoral component. The Thompson component was cheaper than the ETS or Exeter/Unitrax component, but the committee were aware of future regulatory changes requiring data about implants, meaning that some older designs are unlikely to be used in the future. Without further evidence on other cemented components currently in use, they were unable to recommend one femoral component over another. To choose the most cost-effective option, the committee agreed it was important for hospitals to consider not only the cost of the component itself, but also the cost of training needs when switching to a new component, alongside any future costs relating to adverse outcomes. There may also be other considerations, in addition to costs. For example, some hospitals may choose to use a femoral component that is suitable for both hemiarthroplasty and total hip arthroplasty to allow consistency and greater efficiency in practice. The committee thought it was important from a training and development perspective that medical teams become familiar with implanting 1 single type of component as standard. They agreed that more research was needed on the effectiveness of different components. The committee agreed that although the observational evidence was for femoral components not used in the UK, it did emphasise the importance of registry data in exploring longer-term adverse outcomes such as periprosthetic fracture in trauma patients who had undergone hemiarthroplasty. Recording data on hemiarthroplasties for submission to a national registry, such as the National Joint Registry, will help to provide real-world data on the long-term effectiveness and safety of different femoral components in trauma patients. The committee commented that the 2011 recommendation to use a proven femoral 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 14,
+    "section_number": "1.4",
+    "section_title": "Anaesthesia",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011"
+    ],
+    "text": "Hip fracture: management (CG124) component design (based on Orthopaedic Device Evaluation Panel ratings) came from evidence of people having elective surgery. They queried whether femoral component designs for elective patients who have arthritis were appropriate for trauma patients, given that arthritis often puts people at greater risk of fractures. Therefore, the committee drafted a recommendation for research on femoral component design that would allow data for this fragility fracture population to be captured. Registry data could also be used to evaluate long-term effectiveness in specific subpopulations such as people from different ethnic backgrounds and other groups for which there is currently no evidence. Full details of the evidence and the committee's discussion are in evidence review A: femoral component design used for hemiarthroplasties. How the 2023 recommendations might affect practice By recommending 1 femoral component as standard for hemiarthroplasties, surgical teams will become familiar operating with this prosthesis and need less training in different components. Hospitals or trusts will also choose a component that provides the best value for money, but within the context of training requirements, team familiarity and overall costs. The National Joint Registry already collects data on total hip arthroplasties. Collecting data on hemiarthroplasties in this, or a similar database, may require some extra administrative work. But the real-world data will be valuable in helping future decision makers choose the most clinically and cost-effective femoral component. Having further research on the effectiveness of different femoral components in people from different population groups will also help inform decisions and address health inequalities in this area. 1.6.8 Consider an anterolateral approach in favour of a posterior approach when inserting a hemiarthroplasty. [2011] 1.6.9 Use extramedullary implants such as a sliding hip screw in preference to an intramedullary nail in people with trochanteric fractures above and including the 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 15,
+    "section_number": "1.7",
+    "section_title": "Mobilisation strategies",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011",
+      "2011, amended 2023"
+    ],
+    "text": "Hip fracture: management (CG124) lesser trochanter (except reverse oblique). [2011, amended 2023] 1.6.10 Use an intramedullary nail to treat people with a subtrochanteric fracture. [2011] 1.7 Mobilisation strategies 1.7.1 Offer people a physiotherapy assessment and, unless medically or surgically contraindicated, mobilisation on the day after surgery. [2011] 1.7.2 Offer people mobilisation at least once a day and ensure regular physiotherapy review. [2011] 1.8 Multidisciplinary management 1.8.1 From admission, offer people a formal, acute, orthogeriatric or orthopaedic wardbased Hip Fracture Programme that includes all of the following: orthogeriatric assessment rapid optimisation of fitness for surgery early identification of individual goals for multidisciplinary rehabilitation to recover mobility and independence, and to facilitate return to pre‐fracture residence and long-term wellbeing continued, coordinated, orthogeriatric and multidisciplinary review liaison or integration with related services, particularly mental health, falls prevention, bone health, primary care and social services clinical and service governance responsibility for all stages of the pathway of care and rehabilitation, including those delivered in the community. [2011] 1.8.2 If a hip fracture complicates or precipitates a terminal illness, the multidisciplinary team should still consider the role of surgery as part of a palliative care approach that: 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 16,
+    "section_number": "1.7",
+    "section_title": "Mobilisation strategies",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011"
+    ],
+    "text": "Hip fracture: management (CG124) minimises pain and other symptoms and establishes the person's own priorities for rehabilitation and considers the person's wishes about their end-of-life care. [2011] 1.8.3 Healthcare professionals should deliver care that minimises the person's risk of delirium and maximises their independence, by: actively looking for cognitive impairment when people first present with hip fracture reassessing people to identify delirium that may arise during their admission offering individualised care in line with NICE's guideline on delirium. [2011] 1.8.4 Consider early supported discharge as part of the Hip Fracture Programme, provided the Hip Fracture Programme multidisciplinary team remains involved, and the person: is medically stable and has the mental ability to participate in continued rehabilitation and is able to transfer and mobilise short distances and has not yet achieved their full rehabilitation potential, as discussed with the person, carer and family. [2011] 1.8.5 Only consider intermediate care (continued rehabilitation in a community hospital or residential care unit) if all of the following criteria are met: intermediate care is included in the Hip Fracture Programme and the Hip Fracture Programme team retains the clinical lead, including patient selection, agreement of length of stay and ongoing objectives for intermediate care and the Hip Fracture Programme team retains the managerial lead, ensuring that intermediate care is not resourced as a substitute for an effective acute hospital programme. [2011] 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 17,
+    "section_number": "1.9",
+    "section_title": "Patient and carer information",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011"
+    ],
+    "text": "Hip fracture: management (CG124) 1.8.6 People admitted from care or nursing homes should not be excluded from rehabilitation programmes in the community or hospital, or as part of an early supported discharge programme. [2011] 1.9 Patient and carer information 1.9.1 Offer patients (or, as appropriate, their carer and/or family) verbal and printed information about treatment and care including: diagnosis choice of anaesthesia choice of analgesia and other medications surgical procedures possible complications postoperative care rehabilitation programme long-term outcomes healthcare professionals involved. [2011] 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 18,
+    "section_number": "1.9",
+    "section_title": "Patient and carer information",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011"
+    ],
+    "text": "Hip fracture: management (CG124) Recommendations for research The 2011, 2017 and 2023 guideline committees have made the following recommendations for research. The 2011 committee's full set of recommendations for research are detailed in the full guideline. As part of the 2017 update, the standing committee removed the recommendation for research on displaced intracapsular hip fractures and made an additional recommendation for research on undisplaced intracapsular hip fractures. Full details are available in section 3.5 of the full guideline addendum. 1 Imaging options in occult hip fracture In people with a continuing suspicion of a hip fracture but whose radiographs are normal, what is the clinical and cost effectiveness of CT compared with MRI, in confirming or excluding the fracture? [2011] Why the committee made the recommendation for research The Guideline Development Group's consensus decision to recommend CT over a radionuclide bone scan as an alternative to MRI to detect occult hip fractures reflects current NHS practice but assumes that advances in technology have made the reliability of CT comparable with that of MRI. If modern CT can be shown to have similar reliability and accuracy to MRI, then this has considerable implications because of its widespread availability out of hours and lower cost. It is therefore a high priority to confirm or refute this assumption by direct randomised comparison. The study design would need to retain MRI as the 'gold standard' for cases of uncertainty and to standardise the criteria, expertise and procedures for radiological assessment. Numbers required would depend on the degree of sensitivity and specificity (the key outcome criteria) set as target requirement for comparability, but need not necessarily be very large. 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 19,
+    "section_number": "1.9",
+    "section_title": "Patient and carer information",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011",
+      "2017"
+    ],
+    "text": "Hip fracture: management (CG124) 2 Anaesthesia What is the clinical and cost effectiveness of regional versus general anaesthesia on postoperative morbidity in people with hip fracture? [2011] Why the committee made the recommendation for research No recent randomised controlled trials were identified that fully address this question. The evidence is old and does not reflect current practice. In addition, in most of the studies the patients are sedated before regional anaesthesia is administered, and this is not taken into account when analysing the results. The study design for the proposed research would be best addressed by a randomised controlled trial. This would ideally be a multicentre trial including 3,000 participants in each arm. This is achievable given that there are about 70,000 to 75,000 hip fractures a year in the UK. The study should have 3 arms that look at spinal anaesthesia versus spinal anaesthesia plus sedation versus general anaesthesia; this would separate those with regional anaesthesia from those with regional anaesthesia plus sedation. The study would also need to control for surgery, especially type of fracture, prosthesis and grade of surgeon. A qualitative research component would also be helpful to study patient preference for type of anaesthesia. 3 Undisplaced intracapsular hip fractures For people with undisplaced (or non-displaced) intracapsular hip fracture, what features should be used to characterise the injury and what are the optimal clinical and costeffective management strategies? [2017] 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 20,
+    "section_number": "1.9",
+    "section_title": "Patient and carer information",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011"
+    ],
+    "text": "Hip fracture: management (CG124) Why the committee made the recommendation for research Between 5% and 15% of people with an intracapsular hip fracture will have an undisplaced fracture. There is variation in the UK in how undisplaced intracapsular hip fractures are recognised, resulting in some people not being offered the most appropriate treatment. Research is needed to help healthcare professionals understand the clinical characteristics of people who have undisplaced hip fracture (on anterior-posterior and lateral X‐rays) and how this relates to the effectiveness of different treatment strategies. The committee also noted a paucity of evidence for 2 of the interventions (total hip replacement and hemiarthroplasty) that could potentially be useful for people with undisplaced intracapsular hip fracture. A randomised controlled trial comparing these interventions would be beneficial. 4 Intensive rehabilitation therapies after hip fracture What is the clinical and cost effectiveness of additional intensive physiotherapy and/or occupational therapy (for example, progressive resistance training) after hip fracture? [2011] 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 21,
+    "section_number": "1.9",
+    "section_title": "Patient and carer information",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011"
+    ],
+    "text": "Hip fracture: management (CG124) Why the committee made the recommendation for research The rapid restoration of physical and self-care functions is critical to recovery from hip fracture, particularly where the goal is to return the person to preoperative levels of function and residence. Approaches that are worthy of future development and investigation include progressive resistance training, progressive balance and gait training, supported treadmill gait re‐training, dual task training and activities of daily living training. The optimal time point at which these interventions should be started requires clarification. The ideal study design is a randomised controlled trial. Initial studies may have to focus on proof of concept and be mindful of costs. A phase 3 randomised controlled trial is required to determine clinical effectiveness and cost effectiveness. The ideal sample size will be around 400 to 500 patients, and the primary outcome should be physical function and health-related quality of life. Outcomes should also include falls. A formal sample size calculation will need to be undertaken. Outcomes should be followed over a minimum of 1 year, and compare if possible, either the recovery curve for restoration of function or time to attainment of functional goals. 5 Early supported discharge in care home patients What is the clinical and cost effectiveness of early supported discharge on mortality, quality of life and functional status in people with hip fracture who are admitted from a care home? [2011] 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 22,
+    "section_number": "1.9",
+    "section_title": "Patient and carer information",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Hip fracture: management (CG124) Why the committee made the recommendation for research Residents of care and nursing homes account for about 30% of all people with hip fracture admitted to hospital. Two-thirds of these come from care homes and the remainder from nursing homes. These people are frailer, more functionally dependent and have a higher prevalence of cognitive impairment than people admitted from their own homes. One-third of those admitted from a care home are discharged to a nursing home and one-fifth are readmitted to hospital within 3 months. There are no clinical trials to define the optimal rehabilitation pathway following hip fracture for these people and therefore represent a discrete cohort where the existing metaanalyses do not apply. As a consequence, many people are denied structured rehabilitation and are discharged back to their care home or nursing home with very little or no rehabilitation input. Given the patient frailty and comorbidities, rehabilitation may have no effect on clinical outcomes for this group. However, the fact that they already live in a home where they are supported by trained care staff clearly provides an opportunity for a systematic approach to rehabilitation. Early multidisciplinary rehabilitation based in care homes or nursing homes would take advantage of the day-to-day care arrangements already in place and provide additional NHS support to deliver naturalistic rehabilitation, where problems are tackled in the person's residential setting. Early supported multidisciplinary rehabilitation could reduce hospital stay, improve early return to function, and affect both readmission rates and the level of NHS‐funded nursing care required. The research would follow a 2‐stage design: (1) an initial feasibility study to refine the selection criteria and process for reliable identification and characterisation of those considered most likely to benefit, together with the intervention package and measures for collaboration between the Hip Fracture Programme team, care-home staff and other community-based professionals and (2) a cluster randomised controlled comparison (for example, with 2 or more intervention units and matched control units) set against agreed outcome criteria. The latter should include those specified above, together with measures of the impact on care-home staff activity and cost, as well as qualitative data from patients on relevant quality-of-life variables. 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 23,
+    "section_number": "1.9",
+    "section_title": "Patient and carer information",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2023"
+    ],
+    "text": "Hip fracture: management (CG124) 6 Long-term effectiveness of total hip replacement What is the long-term clinical and cost effectiveness for adults (including different subgroups) undergoing total hip replacement compared with hemiarthroplasty for displaced intracapsular hip fracture? [2023] Why the committee made the recommendation for research The committee discussed the potential long-term benefit of total hip arthroplasty in specific groups of people, in particular younger age groups with fewer or less severe comorbidities. As the evidence did not provide much long-term data, and results were not reported for different age categories, it was agreed that further research should be carried out to inform future recommendations. A recommendation for research on long-term effectiveness of total hip replacement was therefore included to highlight the importance of comparing the effectiveness of total hip arthroplasty with hemiarthroplasty in the long term and determining the effect of each type of arthroplasty on different population subgroups. Full details of the evidence and the committee's discussion are in evidence review B: total hip replacement versus hemiarthroplasty. 7 Femoral component design In adults undergoing hemiarthroplasty for displaced intracapsular hip fracture (including in different subgroups), which femoral component design has the best long-term outcomes? [2023] 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 24,
+    "section_number": "1.9",
+    "section_title": "Patient and carer information",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Hip fracture: management (CG124) Why the committee made the recommendation for research The committee commented that the 2011 recommendation to use a proven femoral component design (based on Orthopaedic Device Evaluation Panel ratings) came from evidence of people having elective surgery. They queried whether femoral component designs for elective patients who have arthritis were appropriate for trauma patients, given that arthritis often puts people at greater risk of fractures. Therefore, the committee drafted a recommendation for research on femoral component design that would allow data for this fragility fracture population to be captured. Registry data could also be used to evaluate long-term effectiveness in specific subpopulations such as people from different ethnic backgrounds and other groups for which there is currently no evidence. Full details of the evidence and the committee's discussion are in evidence review A: femoral component design used for hemiarthroplasties. 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 25,
+    "section_number": "1.9",
+    "section_title": "Patient and carer information",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Hip fracture: management (CG124) Context Hip fracture refers to a fracture occurring in the area between the edge of the femoral head and 5 cm below the lesser trochanter (see figure 1 in the full guideline). These fractures are generally divided into 2 main groups. Those above the insertion of the capsule of the hip joint are termed intracapsular, subcapital or femoral neck fractures. Those below the insertion are extracapsular. The extracapsular group is split further into trochanteric (interor pertrochanteric and reverse oblique) and subtrochanteric. Hip fracture is a major public health issue due to an ever-increasing ageing population. About 65,000 hip fractures occur each year and the annual cost (not including the considerable cost of social care) for all UK hip fracture cases is about £1 billion. About 10% of people with a hip fracture die within 1 month and about one‐third within 12 months. Most of the deaths are due to associated conditions and not to the fracture itself, reflecting the high prevalence of comorbidity. Because the occurrence of fall and fracture often signals underlying ill health, a comprehensive multidisciplinary approach is required from presentation to subsequent follow‐up, including the transition from hospital to community. This guideline covers the management of hip fracture from admission to secondary care through to final return to the community and discharge from specific follow‐up. It assumes that anyone clinically suspected of having a hip fracture will normally be referred for immediate hospital assessment. It excludes (other than by cross‐reference) aspects covered by parallel NICE guidance, most notably primary and secondary prevention of fragility fractures, but recognises the importance of effective linkage to these closely related elements of comprehensive care. Although hip fracture is predominantly a phenomenon of later life (the National Hip Fracture Database reports the average age of a person with hip fracture as 84 years for men and 83 for women), it may occur at any age in people with osteoporosis or osteopenia, and this guidance is applicable to adults across the age spectrum. Management of hip fracture has improved through the research and reporting of key skills, especially by collaborative teams specialising in the care of older people (using the general designation 'orthogeriatrics'). These skills are applicable in hip fracture irrespective of age, and the guidance includes recommendations that cover the needs of younger people by drawing on such skills in an organised manner. Although not a structured service delivery evaluation, the Guideline Development Group was required to extend its remit to cover essential implications for service organisation 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 26,
+    "section_number": "1.9",
+    "section_title": "Patient and carer information",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Hip fracture: management (CG124) within the NHS where these are fundamental to hip fracture management, and this has been done. The NICE surveillance review identified new studies that were consistent with the current recommendations. However, because of a low level of compliance (around 30% nationally) with the recommendation to offer total hip replacement to people with displaced intracapsular hip fractures, we have updated this part of the guideline. The 2017 update also covers interventions for undisplaced intracapsular hip fractures, which were not covered in the original guideline. The guideline will assume that prescribers will use a drug's summary of product characteristics to inform decisions made with individual patients. 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 27,
+    "section_number": "1.9",
+    "section_title": "Patient and carer information",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Hip fracture: management (CG124) Finding more information and committee details To find NICE guidance on related topics, including guidance in development, see the NICE topic page on injuries, accidents and wounds. For full details of the evidence and the guideline committee's discussions, see the full guideline, addendum and evidence reviews. You can also find information about how the guideline was developed, including details of the committee. NICE has produced tools and resources to help you put this guideline into practice. For general help and advice on putting our guidelines into practice, see resources to help you put NICE guidance into practice. 28"
+  },
+  {
+    "document_name": "Hip fracture: management",
+    "document_code": "CG124",
+    "publisher": "NICE",
+    "published_date": "2011-06-22",
+    "last_updated": "2023-01-06",
+    "page_number": 28,
+    "section_number": "1.9",
+    "section_title": "Patient and carer information",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2011",
+      "2011, amended 2014",
+      "2011, amended 2023",
+      "2017",
+      "2023"
+    ],
+    "text": "Hip fracture: management (CG124) Update information January 2023: We have reviewed the evidence for the management of intracapsular hip fracture and femoral component design used for hemiarthroplasties, and updated our recommendations. These recommendations are marked [2023]. We also made 2 new recommendations for research. In some cases, minor changes have been made to the wording of other recommendations to bring the language and style up to date, without changing the meaning. We also made a clarification in recommendation 1.6.9 because of changes to the AO classification. This is marked [2011, amended 2023] and it last had an evidence review in 2011. Recommendations marked [2011],[2011, amended 2014] last had an evidence review in 2011. Recommendations marked [2017] last had an evidence review in 2017. May 2017: Recommendations have been updated on the surgical management of hip fracture. These are marked as [2017]. A link was added to recommendation 1.6.4 on cemented implants to highlight safety guidance. Where recommendations end [2011] or [2011, amended 2014], the evidence has not been reviewed since the original guideline. March 2014: The introduction to the full guideline and the wording of recommendation 1.1.1 have been amended to clarify how an occult fracture is identified and when an MRI scan should be done. Minor changes since publication July 2025: We amended recommendation 1.3.8 to specify immediate-release opioids in line with Medicines and Healthcare products Regulatory Agency (MHRA) safety advice that states prolonged-release opioids are not recommended for acute post-operative pain relief. 28"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 1,
+    "section_number": "",
+    "section_title": "Front matter",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (complex): assessment and management NICE guideline Published: 17 February 2016 Last updated: 23 November 2022"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 2,
+    "section_number": "",
+    "section_title": "Front matter",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (complex): assessment and management (NG37) Your responsibility The recommendations in this guideline represent the view of NICE, arrived at after careful consideration of the evidence available. When exercising their judgement, professionals and practitioners are expected to take this guideline fully into account, alongside the individual needs, preferences and values of their patients or the people using their service. It is not mandatory to apply the recommendations, and the guideline does not override the responsibility to make decisions appropriate to the circumstances of the individual, in consultation with them and their families and carers or guardian. All problems (adverse events) related to a medicine or medical device used for treatment or in a procedure should be reported to the Medicines and Healthcare products Regulatory Agency using the Yellow Card Scheme. Local commissioners and providers of healthcare have a responsibility to enable the guideline to be applied when individual professionals and people using services wish to use it. They should do so in the context of local and national priorities for funding and developing services, and in light of their duties to have due regard to the need to eliminate unlawful discrimination, to advance equality of opportunity and to reduce health inequalities. Nothing in this guideline should be interpreted in a way that would be inconsistent with complying with those duties. Commissioners and providers have a responsibility to promote an environmentally sustainable health and care system and should assess and reduce the environmental impact of implementing NICE recommendations wherever possible. 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 4,
+    "section_number": "",
+    "section_title": "Front matter",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (complex): assessment and management (NG37) This guideline is the basis of QS166. This guideline should be read in conjunction with NG41, NG39, NG38 and NG40. Overview This guideline covers assessing and managing pelvic fractures, open fractures and severe ankle fractures (known as pilon fractures and intra-articular distal tibia fractures) in prehospital settings (including ambulance services), emergency departments and major trauma centres. It aims to reduce deaths and long-term health problems by improving the quality of emergency and urgent care. The guideline should be read alongside the NICE guidelines on major trauma, major trauma: service delivery, spinal injury and fractures (non-complex). Who is it for? Healthcare professionals and practitioners who provide care for people with complex fractures in pre-hospital and hospital settings People with complex fractures, their families and carers 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 5,
+    "section_number": "1.1",
+    "section_title": "Pre-hospital settings",
+    "target_population": "Children (under 16)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) Recommendations People have the right to be involved in discussions and make informed decisions about their care, as described in making decisions about your care. Making decisions using NICE guidelines explains how we use words to show the strength (or certainty) of our recommendations, and has information about prescribing medicines (including off-label use), professional guidelines, standards and laws (including on consent and mental capacity), and safeguarding. Recommendations apply to both children (under 16s) and adults (16 or over) unless otherwise specified. Some recommendations on management depend on whether the growth plate of the injured bone has closed (skeletal maturity). The age at which this happens varies. In practice, healthcare professionals use clinical judgement to determine skeletal maturity. When a recommendation depends on skeletal maturity this is clearly indicated. 1.1 Pre-hospital settings 1.1.1 For recommendations on managing airways, recognising and managing chest trauma, controlling external haemorrhage and fluid replacement, see the NICE guideline on major trauma. [2016] Initial pharmacological management of pain 1.1.2 For recommendations on pain assessment in people with suspected complex fractures, see the NICE guideline on major trauma. [2016] 1.1.3 For recommendations on the initial pharmacological management of pain in people with suspected open fractures, see the NICE guideline on major trauma. [2016] 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 6,
+    "section_number": "1.1",
+    "section_title": "Pre-hospital settings",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2016",
+      "2016, amended 2017"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) 1.1.4 For recommendations on the initial pharmacological management of pain in people with suspected high-energy pelvic fractures, see the NICE guideline on major trauma. [2016] 1.1.5 For recommendations on the initial pharmacological management of pain in adults with suspected low-energy pelvic fractures, see the NICE guideline on hip fracture. [2016] 1.1.6 For recommendations on the initial pharmacological management of pain in adults with suspected pilon fractures and children with suspected intra-articular distal tibia fractures, see the NICE guideline on non-complex fractures. [2016] Using a pelvic binder 1.1.7 If active bleeding is suspected from a pelvic fracture following blunt high-energy trauma: apply a purpose-made pelvic binder, or consider an improvised pelvic binder but only if a purpose-made binder does not fit. [2016] Initial management of open fractures before wound excision 1.1.8 Do not irrigate open fractures of the long bones, hindfoot or midfoot in pre-hospital settings. [2016] 1.1.9 Consider a saline-soaked dressing covered with an occlusive layer for open fractures in pre-hospital settings. [2016] 1.1.10 In the pre-hospital setting, consider administering prophylactic intravenous antibiotics as soon as possible and preferably within 1 hour of injury to people with open fractures without delaying transport to hospital. [2016, amended 2017] 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 7,
+    "section_number": "1.2",
+    "section_title": "Hospital settings",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) Splinting long bone fractures of the leg in the pre-hospital setting 1.1.11 In the pre-hospital setting, consider the following for people with suspected long bone fractures of the legs: a traction splint or adjacent leg as a splint if the suspected fracture is above the knee a vacuum splint for all other suspected long bone fractures. [2016] Destination for people with suspected fractures 1.1.12 Transport people with suspected open fractures: directly to a major trauma centre (In some locations or circumstances, intermediate care in a trauma unit might be needed for urgent treatment, in line with agreed practice within the regional trauma network.) or specialist centre that can provide orthoplastic care if a long bone, hindfoot or midfoot are involved, or to the nearest trauma unit or emergency department if the suspected fracture is in the hand, wrist or toes, unless there are pre-hospital triage indications for direct transport to a major trauma centre. [2016] 1.1.13 Transport people with suspected pelvic fractures: to the nearest hospital if suspected pelvic fracture is the only pre-hospital triage indication directly to a major trauma centre (in some locations or circumstances, intermediate care in a trauma unit might be needed for urgent treatment, in line with agreed practice within the regional trauma network) if they also have other pre-hospital triage indications for major trauma. [2016] 1.2 Hospital settings See recommendations 1.1.2 to 1.1.6 for advice on initial pharmacological management of pain. 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 8,
+    "section_number": "1.2",
+    "section_title": "Hospital settings",
+    "target_population": "Children (under 16)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) Vascular injury 1.2.1 Use hard signs (lack of palpable pulse, continued blood loss, or expanding haematoma) to diagnose vascular injury. [2016] 1.2.2 Do not rely on capillary return or Doppler signal to exclude vascular injury. [2016] 1.2.3 Perform immediate surgical exploration if hard signs of vascular injury persist after any necessary restoration of limb alignment and joint reduction. [2016] 1.2.4 In people with a devascularised limb following long bone fracture, use a vascular shunt as the first surgical intervention before skeletal stabilisation and definitive vascular reconstruction. [2016] 1.2.5 Do not delay revascularisation for angiography in people with complex fractures. [2016] 1.2.6 For humeral supracondylar fractures in children (under 16s) without a palpable radial pulse but with a well-perfused hand, consider observation rather than immediate vascular intervention. [2016] Compartment syndrome 1.2.7 In people with fractures of the tibia, maintain awareness of compartment syndrome for 48 hours after injury or fixation by: regularly assessing and recording clinical symptoms and signs in hospital considering continuous compartment pressure monitoring in hospital when clinical symptoms and signs cannot be readily identified (for example, because the person is unconscious or has a nerve block) advising people how to self-monitor for symptoms of compartment syndrome, when they leave hospital. [2016] 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 9,
+    "section_number": "1.2",
+    "section_title": "Hospital settings",
+    "target_population": "Children (under 16)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) Whole-body CT of multiple injuries 1.2.8 Use whole-body CT (consisting of a vertex-to-toes scanogram followed by CT from vertex to mid-thigh) in adults (16 or over) with blunt major trauma and suspected multiple injuries. Patients should not be repositioned during whole-body CT. [2016] 1.2.9 Use clinical findings and the scanogram to direct CT of the limbs in adults (16 or over) with limb trauma. [2016] 1.2.10 Do not routinely use whole-body CT to image children (under 16s). Use clinical judgement to limit CT to the body areas where assessment is needed. [2016] Pelvic fractures Secondary transfer to a major trauma centre or specialist centre The NICE guideline on major trauma: service delivery contains a recommendation for ambulance and hospital trust boards, medical directors and senior managers on transfer between emergency departments. 1.2.11 Immediately transfer people with haemodynamic instability from pelvic or acetabular fractures to a major trauma centre for definitive treatment of active bleeding. [2016] 1.2.12 Transfer people with pelvic or acetabular fractures needing specialist pelvic reconstruction to a major trauma centre or specialist centre within 24 hours of injury. [2016] 1.2.13 Immediately transfer people with a failed closed reduction of a native hip joint to a specialist centre if there is insufficient expertise for open reduction at the receiving hospital. [2016] 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 10,
+    "section_number": "1.2",
+    "section_title": "Hospital settings",
+    "target_population": "Children (under 16)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) Pelvic imaging 1.2.14 Use CT for first-line imaging in adults (16 or over) with suspected high-energy pelvic fractures. [2016] 1.2.15 For first-line imaging in children (under 16s) with suspected high-energy pelvic fractures: use CT rather than X-ray when CT of the abdomen or pelvis is already indicated for assessing other injuries consider CT rather than X-ray when CT of the abdomen or pelvis is not indicated for assessing other injuries. Use clinical judgement to limit CT to the body areas where assessment is needed. [2016] Controlling pelvic haemorrhage The NICE guideline on major trauma: service delivery contains a recommendation for ambulance and hospital trust boards, medical directors and senior managers on interventional radiology and definitive open surgery. 1.2.16 For first-line invasive treatment of active arterial pelvic bleeding, use: interventional radiology if emergency laparotomy is not needed for abdominal injuries pelvic packing if emergency laparotomy is needed for abdominal injuries. [2016] Removing a pelvic binder 1.2.17 For people with suspected pelvic fractures and pelvic binders, remove the binder as soon as possible if: there is no pelvic fracture, or 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 11,
+    "section_number": "1.2",
+    "section_title": "Hospital settings",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) a pelvic fracture is identified as mechanically stable, or the binder is not controlling the mechanical stability of the fracture, or there is no further bleeding or coagulation is normal. Remove all pelvic binders within 24 hours of application. [2016] 1.2.18 Before removing the pelvic binder, agree with a pelvic surgeon how a mechanically unstable fracture should be managed. [2016] Log rolling 1.2.19 Do not log roll people with suspected pelvic fractures before pelvic imaging unless: an occult penetrating injury is suspected in a person with haemodynamic instability log rolling is needed to clear the airway (for example, suction is ineffective in a person who is vomiting). [2016] When log rolling, pay particular attention to haemodynamic stability. Open fractures Management of open fractures before wound excision 1.2.20 Do not irrigate open fractures of the long bones, hindfoot or midfoot in the emergency department before wound excision. [2016] 1.2.21 Consider a saline-soaked dressing covered with an occlusive layer (if not already applied) for open fractures in the emergency department before wound excision. [2016] 1.2.22 In the emergency department, administer prophylactic intravenous antibiotics 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 12,
+    "section_number": "1.2",
+    "section_title": "Hospital settings",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) immediately to people with open fractures if not already given. [2016] Limb salvage in people with open fractures 1.2.23 Do not base the decision whether to perform limb salvage or amputation on an injury severity tool score. [2016] 1.2.24 Perform emergency amputation when: a limb is the source of uncontrollable life-threatening bleeding, or a limb is salvageable but attempted preservation would pose an unacceptable risk to the person's life, or a limb is deemed unsalvageable after orthoplastic assessment. Include the person and their family members or carers (as appropriate) in a full discussion of the options if this is possible. [2016] 1.2.25 Base the decision whether to perform limb salvage or delayed primary amputation on multidisciplinary assessment involving an orthopaedic surgeon, a plastic surgeon, a rehabilitation specialist and the person and their family members or carers (as appropriate). [2016] 1.2.26 When indicated, perform the delayed primary amputation within 72 hours of injury. [2016] Wound excision, staging of fixation and cover 1.2.27 Surgery to achieve wound excision, fixation and cover of open fractures of the long bone, hindfoot or midfoot should be performed concurrently by consultants in orthopaedic and plastic surgery (a combined orthoplastic approach). [2016] 1.2.28 Perform wound excision: immediately for highly contaminated open fractures 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 13,
+    "section_number": "1.2",
+    "section_title": "Hospital settings",
+    "target_population": "Skeletal maturity dependent",
+    "recommendation_years": [
+      "2016",
+      "2022"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) within 12 hours of injury for high-energy open fractures (likely Gustilo-Anderson classification type IIIA or type IIIB) that are not highly contaminated within 24 hours of injury for all other open fractures. [2016] 1.2.29 Perform fixation and definitive soft tissue cover: at the same time as wound excision if the next orthoplastic list allows this within the time to wound excision recommended in 1.2.28, or within 72 hours of injury if definitive soft tissue cover cannot be performed at the time of wound excision. [2016] 1.2.30 When internal fixation is used, perform definitive soft tissue cover at the same time. [2016] 1.2.31 Use a temporary dressing that avoids wound desiccation and minimises the number of dressing changes after wound excision if immediate definitive soft tissue cover has not been performed [2022]. For a short explanation of why the committee made the 2022 recommendation and how it might affect practice, see the rationale and impact section on temporary dressings for open fractures after wound excision but before definitive tissue cover. Full details of the evidence and the committee's discussion are in evidence review A: negative pressure wound therapy for temporary closure of open fractures. Pilon fractures in adults (skeletally mature) 1.2.32 Create a definitive management plan and perform initial surgery (temporary or definitive) within 24 hours of injury in adults (skeletally mature) with displaced pilon fractures. [2016] 1.2.33 If a definitive management plan and initial surgery cannot be performed at the receiving hospital within 24 hours of injury, transfer adults (skeletally mature) 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 14,
+    "section_number": "1.3",
+    "section_title": "Documentation",
+    "target_population": "Skeletal maturity dependent",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) with displaced pilon fractures to an orthoplastic centre (ideally this would be emergency department to emergency department transfer to avoid delay). [2016] 1.2.34 Immediately transfer adults (skeletally mature) with displaced pilon fractures to an orthoplastic centre if there are wound complications. [2016] Intra-articular distal tibia fractures in children (skeletally immature) 1.2.35 Create a definitive management plan involving a children's orthopaedic trauma specialist within 24 hours of diagnosis in children (skeletally immature) with intra-articular distal tibia fractures. [2016] 1.2.36 If a definitive management plan and surgery cannot be performed at the receiving hospital, transfer children (skeletally immature) with intra-articular distal tibia fractures to a centre with a children's orthopaedic trauma specialist (ideally this would be emergency department to emergency department transfer to avoid delay). [2016] 1.3 Documentation The NICE guideline on major trauma: service delivery contains recommendations for ambulance and hospital trust boards, senior managers and commissioners on documentation within a trauma network. 1.3.1 Follow a structured process when handing over care within the emergency department (including shift changes) and to other departments. Ensure that the handover is documented. [2016] 1.3.2 Ensure that all patient documentation, including images and reports, goes with patients when they are transferred to other departments or centres. [2016] 1.3.3 Produce a written summary, which gives the diagnosis, management plan and 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 15,
+    "section_number": "1.3",
+    "section_title": "Documentation",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) expected outcome, and: is aimed at and sent to the patient's GP within 24 hours of admission includes a summary written in plain English that is understandable by patients, family members and carers is readily available in the patient's records. [2016] Photographic documentation of open fracture wounds 1.3.4 All trusts receiving patients with open fractures must have information governance policies in place that enable staff to take and use photographs of open fracture wounds for clinical decision-making 24 hours a day. Protocols must also cover the handling and storage of photographic images of open fracture wounds. [2016] 1.3.5 Consider photographing open fracture wounds when they are first exposed for clinical care, before wound excision and at other key stages of management. [2016] 1.3.6 Keep any photographs of open fracture wounds in the patient's records. [2016] Documentation of neurovascular status 1.3.7 When assessing neurovascular status in a person with a limb injury, document for both limbs: which nerves and nerve function have been assessed and when the findings, including: - sensibility - motor function using the Medical Research Council (MRC) grading system which pulses have been assessed and when 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 16,
+    "section_number": "1.4",
+    "section_title": "Information and support for patients, family",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) how circulation has been assessed when pulses are not accessible. Document and time each repeated assessment. [2016] 1.4 Information and support for patients, family members and carers The NICE guideline on major trauma: service delivery contains a recommendation for ambulance and hospital trust boards, senior managers and commissioners on providing information and support for patients, family members and carers. Providing support 1.4.1 When communicating with patients, family members and carers: manage expectations and avoid misinformation answer questions and provide information honestly, within the limits of your knowledge do not speculate and avoid being overly optimistic or pessimistic when discussing information on further investigations, diagnosis or prognosis ask if there are any other questions. [2016] 1.4.2 The trauma team structure should include a clear point of contact for providing information to patients, their family members and carers. [2016] 1.4.3 If possible, ask the patient if they want someone (family member, carer or friend) with them. [2016] 1.4.4 Reassure people while they are having procedures for fractures under local and regional anaesthesia. [2016] 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 17,
+    "section_number": "1.4",
+    "section_title": "Information and support for patients, family",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) Support for children and vulnerable adults 1.4.5 Allocate a dedicated member of staff to contact the next of kin and provide support for unaccompanied children and vulnerable adults. [2016] 1.4.6 Contact the mental health team as soon as possible for patients who have a preexisting psychological or psychiatric condition that might have contributed to their injury, or a mental health problem that might affect their wellbeing or care in hospital. [2016] 1.4.7 For a child or vulnerable adult with a complex fracture, enable their family members or carers to remain within eyesight if appropriate. [2016] 1.4.8 Work with family members and carers of children and vulnerable adults to provide information and support. Take into account the age, developmental stage and cognitive function of the child or vulnerable adult. [2016] 1.4.9 Include siblings of an injured child when offering support to family members and carers. [2016] Providing information 1.4.10 Explain to patients, family members and carers, what is happening and why it is happening. Provide: information on known injuries details of immediate investigations and treatment, and if possible include time schedules. [2016] 1.4.11 Offer people with fractures the opportunity to see images of their injury, taken before and after treatment. [2016] 1.4.12 Provide people with fractures with both verbal and written information on the following when the management plan is agreed or changed: expected outcomes of treatment, including time to returning to usual 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 18,
+    "section_number": "1.4",
+    "section_title": "Information and support for patients, family",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) activities and the likelihood of permanent effects on quality of life (such as pain, loss of function and psychological effects) amputation, if this is a possibility activities they can do to help themselves home care options, if needed rehabilitation, including whom to contact and how (this should include information on the importance of active patient participation for achieving goals and the expectations of rehabilitation) mobilisation and weight-bearing, including upper limb load bearing for arm fractures. [2016] 1.4.13 Document all key communications with patients, family members and carers about the management plan. [2016] 1.4.14 Ensure that all health and social care practitioners have access to information previously given to people with fractures to enable consistent information to be provided. [2016] Providing information about transfer from an emergency department 1.4.15 For patients who are being transferred from an emergency department to another centre, provide verbal and written information that includes: the reason for the transfer the location of the receiving centre and the patient's destination within the receiving centre the name and contact details of the person responsible for the patient's care at the receiving centre the name and contact details of the person who was responsible for the patient's care at the initial hospital. [2016] 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 19,
+    "section_number": "1.5",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) 1.5 Training and skills These recommendations are for ambulance and hospital trust boards, medical directors and senior managers within trauma networks. 1.5.1 Ensure that each healthcare professional within the trauma service has the training and skills to deliver, safely and effectively, the interventions they are required to give, in line with the NICE guideline on non-complex fractures, complex fractures, major trauma, major trauma services and spinal injury assessment. [2016] 1.5.2 Enable each healthcare professional who delivers care to people with fractures to have up-to-date training in the interventions they are required to give. [2016] Terms used in this guideline Delayed primary amputation A procedure that is carried out when amputation is chosen as preferable to attempting reconstructive surgery for limb salvage, but not performed as an emergency operation. Orthoplastic centre A hospital with a dedicated, combined service for orthopaedic and plastic surgery in which consultants from both specialties work simultaneously to treat open fractures as part of regular, scheduled, combined orthopaedic and plastic surgery operating lists. Consultants are supported by combined review clinics and specialist nursing teams. Wound excision Also known as debridement, this refers to the separation of tissues that are contaminated or non-viable from those that are healthy and viable. 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 20,
+    "section_number": "1.5",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (complex): assessment and management (NG37) Recommendations for research The guideline committee has made the following key recommendations for research. 1 Temporary dressings for up to 72 hours between wound excision and definitive soft tissue cover What is the most clinically and cost effective temporary (up to 72 hours) dressing (including negative pressure dressings) for open fractures after wound excision for: minimising the number of dressing changes or supplementary dressings minimising the number of associated bedding changes acceptability for patients, for example, in terms of minimising pain minimising nursing time. For a short explanation of why the committee made this recommendation for research, see the rationale section on temporary dressings for open fractures after wound excision but before definitive tissue cover. Full details of the evidence and the committee's discussion are in evidence review A: negative pressure wound therapy for temporary closure of open fractures. 2 Cystourethrogram How accurate is the first CT scan with contrast (trauma scan) for detecting bladder injuries in people with suspected bladder injuries after a traumatic incident? Why this is important Bladder injuries usually occur in people with high-energy pelvic fractures after a traumatic incident. Currently people with suspected bladder injuries have a CT scan with intravenous contrast (a trauma scan) to diagnose non-bladder injuries. People who do not have injuries of 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 21,
+    "section_number": "1.5",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (complex): assessment and management (NG37) needing urgent treatment may then either be given another CT scan or a fluoroscopic cystogram to check for bladder injury. People with injuries needing urgent treatment (for example, bleeding or a neurological injury) are taken to the resuscitation room after the initial CT scan (trauma scan). Once the person's condition is stabilised they are taken to either the CT or fluoroscopy suite for a retrograde cystogram to check for bladder injury. The guideline committee agreed that these strategies are accurate for the diagnosis of bladder injuries, but felt that there were advantages to a strategy that did not involve a second set of images. The guideline committee was interested in whether the first CT scan with intravenous contrast (trauma scan) could accurately diagnose bladder injuries. 3 Pilon fractures In adults with closed pilon fractures, what method of fixation provides the best clinical and cost effectiveness outcomes as assessed by function and incidence of major complications at 2 years (stratified for timing of definitive surgery early [under 36 hours] versus later [over 36 hours])? Why this is important Pilon fractures involve a significant proportion of the weight-bearing surface of the distal tibia. The damaged joint surface is vulnerable to degeneration. Therefore, the injury can lead to long-term disability, most commonly arthritis with pain and stiffness. Surgery can improve outcomes, allowing reduction and fixation of the fracture and early movement of the ankle joint. However, it has a high incidence of serious complications, particularly related to the vulnerability of the soft tissues around the ankle. The potential for life-changing adverse consequences of both the injury and its treatment is known, but the best management strategy to minimise these consequences is unclear. 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 22,
+    "section_number": "1.5",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (complex): assessment and management (NG37) Rationale and impact This section briefly explains why the committee made the recommendation dated 2022 and how it might affect practice. Temporary dressings for open fractures after wound excision but before definitive soft tissue cover Recommendation 1.2.31 Why the committee made the recommendation The evidence showed that use of negative pressure wound therapy (NPWT) after wound excision if immediate definitive soft tissue cover has not been performed is not more clinically effective than other dressings and is unlikely to be cost effective. However, the committee agreed that most of the evidence related to the use of NPWT as a therapy rather than as a temporary dressing (which is what it is used for in the UK) and therefore most of the long-term outcomes were not relevant to the UK context. Furthermore, the cost effectiveness of NPWT is unclear. They agreed that, on that basis, it was not appropriate to make a 'do not routinely use' recommendation. The committee agreed that, in their experience, compared to other dressings, NPWT could: reduce the number of times dressings are changed or supplemented and reduce the number of associated bedding changes, thereby saving nursing time reduce the pain and discomfort of changing or supplementing dressings, thereby improving patient satisfaction. They also noted that NPWT is useful for wounds that are heavily exuding where other dressings may need to be changed or supplemented more often. The committee agreed that there are several types of dressing that can remain in situ until definitive soft tissue cover is performed up to 72 hours later. NPWT is not the only choice. of 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 23,
+    "section_number": "1.5",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (complex): assessment and management (NG37) They also agreed it was important to ensure the correct application of dressings. The committee agreed to replace the 2016 recommendation on NPWT with a recommendation to apply a temporary dressing that avoids wound desiccation and minimises dressing changes. They were not able to recommend specific dressings because the evidence they considered only related to NPWT, so they discussed whether to make a recommendation for research on specific temporary dressing for open fractures after wound excision but before definitive soft tissue cover. Since they could not be sure that this evidence did not already exist (because it was not searched for as part of this update) they agreed to ask stakeholders at consultation. Stakeholders did not raise any objection and so the committee proceeded to make a recommendation for research on temporary dressings. How the recommendations might affect practice NPWT is widely used as a temporary dressing for open fractures before definitive soft tissue cover, however other temporary dressings can be effective in providing temporary coverage and may be more cost-effective. The updated recommendation stipulates the use of a temporary dressing that prevents desiccation and minimises the number of dressing changes. This may reduce the use of NPWT. Return to recommendation of 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 24,
+    "section_number": "1.5",
+    "section_title": "Training and skills",
+    "target_population": "Adults (16+)",
+    "recommendation_years": [],
+    "text": "Fractures (complex): assessment and management (NG37) Context Complex fractures make up the minority of the 1.8 million fractures that occur in England each year, but are associated with considerable morbidity and are a large burden on healthcare resources. The treatment of complex fractures is often complicated and usually involves multiple healthcare professionals and specialists. This guideline covers the triage, initial and acute stage assessment and management, imaging, referral to specialist care and treatment of complex fractures in children (under 16s) and adults (16 or over). It includes recommendations in the following key clinical areas: management in pre-hospital settings immediate destination for people with suspected complex fractures initial assessment and management in acute care imaging and haemorrhage control of pelvic fractures management of open fractures management plan and referral for adults with pilon fractures and children with intra-articular distal tibia fractures documentation information and support for people with complex fractures and their families and carers. The guideline does not address all potential situations for every individual complex fracture. It is based around topics that should be considered as representative of an evidence-based guide to the general management of complex fractures. It provides recommendations on open fractures, pelvic fractures, pilon fractures in adults and intra-articular distal tibia fractures in children. It does not cover the prevention and follow-up of complex fractures, and the management and follow-up of dislocations and conditions such as osteoporosis and osteoarthritis. The guideline does not cover non-complex fractures, skull fractures, hip fractures and of 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 25,
+    "section_number": "1.5",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (complex): assessment and management (NG37) spinal injuries. These are covered by other NICE guidelines. of 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 26,
+    "section_number": "1.5",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (complex): assessment and management (NG37) Finding more information and committee details To find NICE guidance on related topics, including guidance in development, see the NICE topic page on injuries, accidents and wounds. For full details of the evidence and the guideline committee's discussions, see the full guideline and evidence review. You can also find information about how the guideline was developed, including details of the committee. NICE has produced tools and resources to help you put this guideline into practice. For general help and advice on putting our guidelines into practice, see resources to help you put NICE guidance into practice. of 27"
+  },
+  {
+    "document_name": "Fractures (complex): assessment and management",
+    "document_code": "NG37",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2022-11-23",
+    "page_number": 27,
+    "section_number": "1.5",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [
+      "2016"
+    ],
+    "text": "Fractures (complex): assessment and management (NG37) Update information November 2022: We reviewed the evidence on negative pressure wound therapy, and updated recommendation 1.2.31. Recommendations marked [2016] last had an evidence review in 2016. For some recommendations we have replaced the word 'debridement' with 'wound excision'. November 2017: Recommendation 1.1.10 was amended to change the wording from 'administer prophylactic antibiotics' to 'consider administering prophylactic antibiotics'. 27"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 1,
+    "section_number": "",
+    "section_title": "Front matter",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management NICE guideline Published: 17 February 2016"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 2,
+    "section_number": "",
+    "section_title": "Front matter",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) Your responsibility The recommendations in this guideline represent the view of NICE, arrived at after careful consideration of the evidence available. When exercising their judgement, professionals and practitioners are expected to take this guideline fully into account, alongside the individual needs, preferences and values of their patients or the people using their service. It is not mandatory to apply the recommendations, and the guideline does not override the responsibility to make decisions appropriate to the circumstances of the individual, in consultation with them and their families and carers or guardian. All problems (adverse events) related to a medicine or medical device used for treatment or in a procedure should be reported to the Medicines and Healthcare products Regulatory Agency using the Yellow Card Scheme. Local commissioners and providers of healthcare have a responsibility to enable the guideline to be applied when individual professionals and people using services wish to use it. They should do so in the context of local and national priorities for funding and developing services, and in light of their duties to have due regard to the need to eliminate unlawful discrimination, to advance equality of opportunity and to reduce health inequalities. Nothing in this guideline should be interpreted in a way that would be inconsistent with complying with those duties. Commissioners and providers have a responsibility to promote an environmentally sustainable health and care system and should assess and reduce the environmental impact of implementing NICE recommendations wherever possible. 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 4,
+    "section_number": "",
+    "section_title": "Front matter",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) This guideline should be read in conjunction with NG41, NG39, NG37 and NG40. Overview This guideline covers assessing and managing non-complex fractures that can be treated in the emergency department or orthopaedic clinic. It aims to improve practice so that people with fractures receive the care that they need without unnecessary tests and treatments. The guideline should be read alongside the NICE guidelines on major trauma, major trauma: service delivery, spinal injury and fractures (complex). Who is it for? Healthcare professionals and practitioners who provide care for people with fractures People with fractures, their families and carers 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 5,
+    "section_number": "1.1",
+    "section_title": "Initial pain management and immobilisation",
+    "target_population": "Children (under 16)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) Recommendations People have the right to be involved in discussions and make informed decisions about their care, as described in making decisions about your care. Making decisions using NICE guidelines explains how we use words to show the strength (or certainty) of our recommendations, and has information about prescribing medicines (including off-label use), professional guidelines, standards and laws (including on consent and mental capacity), and safeguarding. Recommendations apply to both children (under 16s) and adults (16 or over) unless otherwise specified. Some recommendations on management depend on whether the growth plate of the injured bone has closed (skeletal maturity). The age at which this happens varies. In practice, healthcare professionals use clinical judgement to determine whether a bone is skeletally mature. When a recommendation depends on skeletal maturity this is clearly indicated. 1.1 Initial pain management and immobilisation Pain assessment 1.1.1 See the NICE guideline on patient experience in adult NHS services for advice on assessing pain in adults. 1.1.2 Assess pain regularly in people with fractures using a pain assessment scale suitable for the person's age, developmental stage and cognitive function. 1.1.3 Continue to assess pain in hospital using the same pain assessment scale that was used in the pre-hospital setting. 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 6,
+    "section_number": "1.1",
+    "section_title": "Initial pain management and immobilisation",
+    "target_population": "Children (under 16)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) Initial pharmacological management of pain in adults (16 or over) 1.1.4 For the initial management of pain in adults (16 or over) with suspected long bone fractures of the legs (tibia, fibula) or arms (humerus, radius, ulna), offer: oral paracetamol for mild pain oral paracetamol and codeine for moderate pain intravenous paracetamol supplemented with intravenous morphine titrated to effect for severe pain. 1.1.5 Use intravenous opioids with caution in frail or older adults. 1.1.6 Do not offer non-steroidal anti-inflammatory drugs (NSAIDs) to frail or older adults with fractures. 1.1.7 Consider NSAIDs to supplement the pain relief in recommendation 1.1.4 except for frail or older adults. Initial pharmacological management of pain in children (under 16s) 1.1.8 For the initial management of pain in children (under 16s) with suspected long bone fractures of the legs (femur, tibia, fibula) or arms (humerus, radius, ulna), offer: oral ibuprofen, or oral paracetamol, or both for mild to moderate pain intranasal or intravenous opioids for moderate to severe pain (use intravenous opioids if intravenous access has been established). Hot reporting 1.1.9 A radiologist, radiographer or other trained reporter should deliver the definitive written report of emergency department X-rays of suspected fractures before the patient is discharged from the emergency department. 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 7,
+    "section_number": "1.2",
+    "section_title": "Acute stage assessment and diagnostic imaging",
+    "target_population": "Children (under 16)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) Splinting long bone fractures of the leg in the pre-hospital setting 1.1.10 In the pre-hospital setting, consider the following for people with suspected long bone fractures of the legs: a traction splint or adjacent leg as a splint if the suspected fracture is above the knee a vacuum splint for all other suspected long bone fractures. Femoral nerve blocks in children (under 16s) 1.1.11 Consider a femoral nerve block or fascia iliaca block in the emergency department for children (under 16s) with suspected displaced femoral fractures. 1.2 Acute stage assessment and diagnostic imaging Use of clinical prediction rules for suspected knee fractures 1.2.1 Use the Ottawa knee rules to determine whether an X-ray is needed in people over 2 years with suspected knee fractures. Use of clinical prediction rules for suspected ankle fractures 1.2.2 Use the Ottawa ankle and foot rules to determine whether an X-ray is needed in people over 5 years with suspected ankle fractures. Imaging of scaphoid fractures 1.2.3 Consider MRI for first-line imaging in people with suspected scaphoid fractures following a thorough clinical examination. 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 8,
+    "section_number": "1.3",
+    "section_title": "Management in the emergency department",
+    "target_population": "Adults (16+)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) 1.3 Management in the emergency department Reduction of distal radius fractures 1.3.1 Consider intravenous regional anaesthesia (Bier's block) when reducing dorsally displaced distal radius fractures in adults (16 or over) in the emergency department. This should be performed by healthcare professionals trained in the technique, not necessarily anaesthetists. 1.3.2 Do not use gas and air (nitrous oxide and oxygen) on its own when reducing dorsally displaced distal radius fractures in the emergency department. Management of torus fractures 1.3.3 Do not use a rigid cast for torus fractures of the distal radius. 1.3.4 Discharge children with torus fractures after first assessment and advise parents and carers that further review is not usually needed. 1.4 Ongoing orthopaedic management Non-surgical orthopaedic management of unimalleolar ankle fractures 1.4.1 In the non-surgical orthopaedic management of unimalleolar ankle fractures: advise immediate unrestricted weight-bearing as tolerated arrange for orthopaedic follow-up within 2 weeks if there is uncertainty about stability advise all patients to return for review if symptoms are not improving 6 weeks after injury. 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 9,
+    "section_number": "1.3",
+    "section_title": "Management in the emergency department",
+    "target_population": "Skeletal maturity dependent",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) Timing of surgery for ankle fractures 1.4.2 If treating an ankle fracture with surgery, consider operating on the day of injury or the next day. Timing of surgery for distal radius fractures 1.4.3 When needed for distal radius fractures, perform surgery: within 72 hours of injury for intra-articular fractures within 7 days of injury for extra-articular fractures. 1.4.4 When needed for re-displacement of distal radius fractures, perform surgery within 72 hours of the decision to operate. Definitive treatment of distal radius fractures in adults (skeletally mature) 1.4.5 Consider manipulation and a plaster cast in adults (skeletally mature) with dorsally displaced distal radius fractures. 1.4.6 When surgical fixation is needed for dorsally displaced distal radius fractures in adults (skeletally mature): offer K-wire fixation if: - no fracture of the articular surface of the radial carpal joint is detected or - displacement of the radial carpal joint can be reduced by closed manipulation consider open reduction and internal fixation if closed reduction of the radial carpal joint surface is not possible. Definitive treatment of distal radius fractures in children 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 10,
+    "section_number": "1.3",
+    "section_title": "Management in the emergency department",
+    "target_population": "Skeletal maturity dependent",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) (skeletally immature) 1.4.7 In children (skeletally immature) with dorsally displaced distal radius fractures (including fractures involving a growth plate) who have undergone manipulation, consider: a below-elbow plaster cast or K-wire fixation if the fracture is completely displaced (off-ended). Definitive treatment of proximal humerus fractures in adults (skeletally mature) 1.4.8 For adults (skeletally mature) with displaced low energy proximal humerus fractures: offer non-surgical management for definitive treatment of uncomplicated injuries consider surgery for injuries complicated by an open wound, tenting of the skin, vascular injury, fracture dislocation or a split of the humeral head. Definitive treatment of femoral shaft fractures in children (skeletally immature) 1.4.9 Admit all children (skeletally immature) with femoral shaft fractures and consider 1 of the following according to age and weight: prematurity and birth injuries: simple padded splint 0 to 6 months: Pavlik's harness or Gallows traction 3 to 18 months (but not in children over 15 kg): Gallows traction 1 to 6 years: straight leg skin traction (becomes impractical in children over 25 kg) with possible conversion to hip spica cast to enable early discharge 4 to 12 years (but not in children over 50 kg): elastic intramedullary nail of 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 11,
+    "section_number": "1.5",
+    "section_title": "Documentation",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) 11 years to skeletal maturity (weight more than 50 kg): elastic intramedullary nails supplemented by end-caps, lateral-entry antegrade rigid intramedullary nail, or submuscular plating. Mobilisation after surgery in people with distal femoral fractures 1.4.10 Consider advising immediate unrestricted weight-bearing as tolerated for people who have had surgery for distal femoral fractures. 1.5 Documentation The NICE guideline on major trauma: service delivery contains recommendations for ambulance and hospital trust boards, senior managers and commissioners on documentation within a trauma network. 1.5.1 Consider developing and using standard documentation to prompt the assessment of the following from first presentation in people with fractures: safeguarding comorbidities falls risk nature of fracture, including classification where possible. 1.5.2 Follow a structured process when handing over care within the emergency department (including shift changes) and to other departments. Ensure that the handover is documented. 1.5.3 Ensure that all patient documentation, including images and reports, goes with patients when they are transferred to other departments or centres. 1.5.4 Produce a written summary, which gives the diagnosis, management plan and expected outcome, and: 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 12,
+    "section_number": "1.6",
+    "section_title": "Information and support for patients, family",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) is aimed at and sent to the patient's GP within 24 hours of admission includes a summary written in plain English that is understandable by patients, family members and carers is readily available in the patient's records. 1.6 Information and support for patients, family members and carers The NICE guideline on major trauma: service delivery contains a recommendation for ambulance and hospital trust boards, senior managers and commissioners on providing information and support to patients, family members and carers. Providing support 1.6.1 When communicating with patients, family members and carers: manage expectations and avoid misinformation answer questions and provide information honestly, within the limits of your knowledge do not speculate and avoid being overly optimistic or pessimistic when discussing information on further investigations, diagnosis or prognosis ask if there are any other questions. 1.6.2 If possible, ask the patient if they want someone (family member, carer or friend) with them. 1.6.3 Reassure people while they are having procedures for fractures under local and regional anaesthesia. of 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 13,
+    "section_number": "1.6",
+    "section_title": "Information and support for patients, family",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) Support for children and vulnerable adults 1.6.4 Allocate a dedicated member of staff to contact the next of kin and provide support for unaccompanied children and vulnerable adults. 1.6.5 For a child or vulnerable adult with a fracture, enable their family members or carers to remain within eyesight if appropriate. 1.6.6 Work with family members and carers of children and vulnerable adults to provide information and support. Take into account the age, developmental stage and cognitive function of the child or vulnerable adult. 1.6.7 Include siblings of an injured child when offering support to family members and carers. Providing information 1.6.8 Explain to patients, family members and carers, what is happening and why it is happening. Provide: information on known injuries details of immediate investigations and treatment, and if possible include time schedules. 1.6.9 Offer people with fractures the opportunity to see images of their injury taken before and after treatment. 1.6.10 Provide people with fractures with both verbal and written information on the following when the management plan is agreed or changed: expected outcomes of treatment, including time to returning to usual activities and the likelihood of any permanent effects on quality of life (such as pain, loss of function or psychological effects) activities they can do to help themselves home care options, if needed of 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 14,
+    "section_number": "1.7",
+    "section_title": "Non-accidental injury",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) rehabilitation, including whom to contact and how (this should include information on the importance of active patient participation for achieving goals and the expectations of rehabilitation) mobilisation and weight-bearing, including upper limb load-bearing for arm fractures. 1.6.11 Document all key communications with patients, family members and carers about the management plan. 1.6.12 Ensure that all health and social care practitioners have access to information previously given to people with fractures to enable consistent information to be provided. Providing information about transfer from the emergency department 1.6.13 For patients who are being transferred from an emergency department to another centre, provide verbal and written information that includes: the reason for the transfer the location of the receiving centre and the patient's destination within the receiving centre the name and contact details of the person responsible for the patient's care at the receiving centre the name and contact details of the person who was responsible for the patient's care at the initial hospital. 1.7 Non-accidental injury 1.7.1 Address issues of non-accidental injury before discharge in all children with femoral fractures. This is particularly important for children who are not walking or talking. For more information, see the NICE guideline on when to suspect child maltreatment. of 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 15,
+    "section_number": "1.8",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) 1.8 Training and skills These recommendations are for ambulance and hospital trust boards, medical directors and senior managers within trauma networks. 1.8.1 Ensure that each healthcare professional within the trauma service has the training and skills to deliver, safely and effectively, the interventions they are required to give, in line with the recommendations in this guideline, and the NICE guidelines on complex fractures, major trauma and spinal injury assessment. 1.8.2 Enable each healthcare professional who delivers care to people with fractures to have up-to-date training in the interventions they are required to give. of 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 16,
+    "section_number": "1.8",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) Recommendations for research The guideline committee has made the following recommendations for research. 1 Imaging of ankle fractures Is CT scanning in addition to initial plain film X-ray clinically effective and cost effective for planning surgical treatment of unstable/displaced ankle fractures compared with plain film X-ray alone? Why this is important Ankle fractures are common and affect a significant number of people every year. Outcomes following surgery are important for patients' long-term function and quality of life, and may also be associated with additional cost if another operation is needed. It is important to know whether adding CT scanning to plain film X-ray improves outcomes following surgery and is cost effective. 2 Virtual compared with face-to-face clinics What is the clinical and cost effectiveness of virtual new patient fracture clinics compared with next-day consultant-led face-to-face clinics in people presenting with non-complex fractures in the emergency department and thought to need an orthopaedic opinion? Why this is important Currently many people with fractures are asked to attend a next-day clinic led by a consultant, although it is believed that a virtual clinic may be at least as effective. If this is the case, face-to-face clinics may be an unnecessary use of time and resources for both patients and the NHS. Firm evidence of clinical and cost effectiveness is needed before virtual clinics can be introduced as part of a change in service structure. of 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 17,
+    "section_number": "1.8",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) 3 Image guidance in the reduction of displaced distal radius fractures For patients with displaced fractures of the distal radius, is manipulation with real-time image guidance more clinically and cost effective than manipulation without real-time image guidance? Why this is important In a large minority of patients with a distal radius fracture, the bone fragments are displaced and need manipulation and reduction into an anatomical position. Currently in the NHS, most manipulations for distal radius fractures are performed in the emergency department without real-time image guidance. It is believed that image guidance may be important, but despite hundreds of people having manipulation for these fractures in the emergency department each day, there are no high-quality studies in this area. 4 Treatment of torus fractures What is the clinical effectiveness and cost effectiveness of no treatment for torus fractures of the distal radius in children compared with soft splints, removable splints or bandages? Why this is important Torus fractures of the distal radius are among the most common fractures in children but management varies widely between immediate discharge from the emergency department to repeated outpatient reviews with casting and imaging. These fractures result from trauma to growing bones and account for an estimated 500,000 emergency department attendances a year in the UK. Current treatment often involves application of a bandage, or a removable cast or a soft cast, with review in outpatient clinics and repeated X-ray imaging. This is despite anecdotal evidence that treatment with simple analgesia and immediate discharge from the emergency department is safe and effective. There have been no studies comparing current treatments with no intervention in children with torus fractures. A randomised controlled trial is needed to evaluate the clinical and cost effectiveness of no treatment compared with soft splints, removable splints or bandages. of 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 18,
+    "section_number": "1.8",
+    "section_title": "Training and skills",
+    "target_population": "Children (under 16)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) Context The annual incidence of fractures in Britain is about 3.6% and the lifetime prevalence nearly 40%. Most of the 1.8 million fractures that occur in England each year are non-complex, and include a wide range of injuries over the complete age range from infancy to old age. Many different bones can be involved and the mechanisms of injury are many and varied. The range of treatment options is also wide. Because of this, non-complex fractures present an enormous challenge to the NHS. Many non-complex fractures get better with minimal clinical intervention. But healthcare can overcomplicate matters, with unnecessary time and effort being expended on fractures that are likely to get better without treatment. However, some non-complex fractures can appear minor and be easily missed, but have the potential for a poor longterm outcome; scaphoid fracture is an example. So there is a need to achieve a balance between making sure that injuries needing treatment are not missed and treatment is avoided for injuries that are likely to get better on their own. This guideline covers the diagnosis, management and follow up of non-complex fractures in children (under 16s) and adults (16 or over). It includes recommendations in the following key clinical areas: initial pain management and immobilisation acute stage assessment and diagnostic imaging management in the emergency department ongoing orthopaedic management documentation information and support for people with fractures and their families and carers non-accidental injury. The guideline does not cover all potential situations for every individual fracture. It is based around a group of topics that should be considered as representative of an evidence-based guide to the general management of non-complex fractures and it provides recommendations for areas in which there is variation in practice. It does not of 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 19,
+    "section_number": "1.8",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) cover skull fractures, hip fractures, spinal injuries, pelvic fractures, open fractures and the management of conditions such as osteoporosis and osteoarthritis. These are covered by other NICE guidelines. of 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 20,
+    "section_number": "1.8",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) Finding more information and committee details To find NICE guidance on related topics, including guidance in development, see the NICE topic page on injuries, accidents and wounds. For full details of the evidence and the guideline committee's discussions, see the full guideline). You can also find information about how the guideline was developed, including details of the committee. NICE has produced tools and resources to help you put this guideline into practice. For general help and advice on putting our guidelines into practice, see resources to help you put NICE guidance into practice. of 21"
+  },
+  {
+    "document_name": "Fractures (non-complex): assessment and management",
+    "document_code": "NG38",
+    "publisher": "NICE",
+    "published_date": "2016-02-17",
+    "last_updated": "2016-02-17",
+    "page_number": 21,
+    "section_number": "1.8",
+    "section_title": "Training and skills",
+    "target_population": "Adults and children (general)",
+    "recommendation_years": [],
+    "text": "Fractures (non-complex): assessment and management (NG38) Update information Minor changes since publication June 2025: We have deleted the recommendation for research on post-operative weightbearing in people with ankle fractures because a good quality trial has been conducted, which has addressed the question. of 21"
+  }
+]
