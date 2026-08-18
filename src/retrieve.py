@@ -7,8 +7,8 @@ Loads the persistent ChromaDB collection and the S-PubMedBERT model,
 and exposes a `retrieve()` function for semantic search plus a
 `build_prompt()` helper that assembles a grounded prompt for an LLM.
 
-TOP_K is configurable: NICE guideline recommendations are short and
-fairly non-redundant, so top_k=3-5 is the recommended range.
+TOP_K = 17 — returns the 17 most similar chunks with evidence and
+citations for maximum context coverage.
 
 Run directly for a quick CLI test:
     python src/retrieve.py "What is the surgical timing for open fractures?"
@@ -26,12 +26,13 @@ CHROMA_DIR = DATA_DIR / "chroma_db"
 COLLECTION_NAME = "clinical_guidelines"
 MODEL_NAME = "pritamdeka/S-PubMedBert-MS-MARCO"
 
-DEFAULT_TOP_K = 4          # recommended range: 3-5
-MIN_TOP_K, MAX_TOP_K = 3, 5
+DEFAULT_TOP_K = 17          # hackathon requirement: retrieve top 17
+MIN_TOP_K, MAX_TOP_K = 1, 50
 
 
 class Retriever:
     def __init__(self):
+        print("[+] Loading retrieval model ...")
         self.model = SentenceTransformer(MODEL_NAME)
         client = chromadb.PersistentClient(path=str(CHROMA_DIR))
         try:
@@ -41,6 +42,7 @@ class Retriever:
                 f"Collection '{COLLECTION_NAME}' not found at {CHROMA_DIR}. "
                 "Run src/embed_and_index.py first."
             ) from e
+        print(f"[+] Collection loaded: {self.collection.count()} chunks indexed")
 
     def retrieve(self, query: str, top_k: int = DEFAULT_TOP_K,
                  metadata_filter: dict | None = None) -> list:
