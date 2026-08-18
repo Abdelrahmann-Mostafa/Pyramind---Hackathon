@@ -40,10 +40,11 @@ def create_chroma_index(
         chunks = json.load(f)
 
     client = chromadb.PersistentClient(path=chroma_path)
-    # Delete existing collection if any
+    
+    # Catch any exception raised if collection does not exist
     try:
         client.delete_collection(collection_name)
-    except ValueError:
+    except Exception:
         pass
 
     collection = client.create_collection(
@@ -54,13 +55,19 @@ def create_chroma_index(
     ids = [c["chunk_id"] for c in chunks]
     embeddings = [c["embedding"] for c in chunks]
     documents = [c["content"] for c in chunks]
-    # Metadata: exclude embedding and content
+    
+    # Metadata filtering & sanitization
     metadatas = []
     for c in chunks:
-        meta = {k: v for k, v in c.items() if k not in ["embedding", "content", "embedding_model", "embedding_dim"]}
-        # Ensure all values are strings, numbers, or bools (ChromaDB accepts)
+        meta = {
+            k: v for k, v in c.items() 
+            if k not in ["embedding", "content", "embedding_model", "embedding_dim"]
+        }
+        # ChromaDB expects primitive types (str, int, float, bool)
         for k, v in meta.items():
-            if not isinstance(v, (str, int, float, bool)):
+            if v is None:
+                meta[k] = ""
+            elif not isinstance(v, (str, int, float, bool)):
                 meta[k] = str(v)
         metadatas.append(meta)
 
