@@ -22,8 +22,6 @@ from sentence_transformers import SentenceTransformer
 _tokenizer = SentenceTransformer("pritamdeka/S-PubMedBert-MS-MARCO").tokenizer
 
 from src.schemas import ProcessedChunk
-
-# ===================================================================
 # CONSTANTS & PATTERNS
 # ===================================================================
 

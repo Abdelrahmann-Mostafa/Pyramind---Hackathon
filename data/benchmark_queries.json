@@ -1,0 +1,152 @@
+[
+  {
+    "query_id": "q001",
+    "query": "What analgesia is recommended for hip fracture patients upon admission?",
+    "category": "in_scope_direct",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.3",
+    "expected_min_top1_similarity": 0.75,
+    "ground_truth_chunk_ids": ["NICE_CG124_p08_c002"],
+    "notes": "NICE recommendation on paracetamol"
+  },
+  {
+    "query_id": "q002",
+    "query": "Should women aged 65 and older be screened for osteoporosis?",
+    "category": "in_scope_direct",
+    "expected_document": "USPSTF_Osteoporosis.pdf",
+    "expected_section": "1",
+    "expected_min_top1_similarity": 0.70,
+    "ground_truth_chunk_ids": ["USPSTF_OST_p03_c001"],
+    "notes": "USPSTF screening recommendation"
+  },
+  {
+    "query_id": "q003",
+    "query": "When should surgery be performed for a hip fracture?",
+    "category": "in_scope_direct",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.2",
+    "expected_min_top1_similarity": 0.72,
+    "ground_truth_chunk_ids": ["NICE_CG124_p08_c001"],
+    "notes": "Timing of surgery"
+  },
+  {
+    "query_id": "q004",
+    "query": "What imaging is recommended if hip fracture is suspected but X-ray is negative?",
+    "category": "in_scope_direct",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.1",
+    "expected_min_top1_similarity": 0.70,
+    "ground_truth_chunk_ids": ["NICE_CG124_p06_c001"],
+    "notes": "Occult fracture imaging"
+  },
+  {
+    "query_id": "q005",
+    "query": "What is the evidence grade for the recommendation to offer MRI?",
+    "category": "in_scope_direct",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.1",
+    "expected_min_top1_similarity": 0.65,
+    "ground_truth_chunk_ids": ["NICE_CG124_p06_c002"],
+    "notes": "Evidence grade for MRI"
+  },
+  {
+    "query_id": "q006",
+    "query": "Are there any recommendations for pain management after surgery?",
+    "category": "in_scope_ambiguous",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.7",
+    "expected_min_top1_similarity": 0.60,
+    "ground_truth_chunk_ids": ["NICE_CG124_p10_c001", "NICE_CG124_p10_c002"],
+    "notes": "Postoperative analgesia"
+  },
+  {
+    "query_id": "q007",
+    "query": "What is the target population for osteoporosis screening according to USPSTF?",
+    "category": "in_scope_ambiguous",
+    "expected_document": "USPSTF_Osteoporosis.pdf",
+    "expected_section": "2",
+    "expected_min_top1_similarity": 0.65,
+    "ground_truth_chunk_ids": ["USPSTF_OST_p05_c001"],
+    "notes": "Target population in screening"
+  },
+  {
+    "query_id": "q008",
+    "query": "How should elderly patients with hip fracture be managed perioperatively?",
+    "category": "in_scope_ambiguous",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.8",
+    "expected_min_top1_similarity": 0.55,
+    "ground_truth_chunk_ids": ["NICE_CG124_p12_c001", "NICE_CG124_p12_c002"],
+    "notes": "Perioperative care"
+  },
+  {
+    "query_id": "q009",
+    "query": "Does the guideline recommend spinal or general anaesthesia for hip fracture surgery?",
+    "category": "in_scope_ambiguous",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.4",
+    "expected_min_top1_similarity": 0.60,
+    "ground_truth_chunk_ids": ["NICE_CG124_p08_c003"],
+    "notes": "Anaesthesia choice"
+  },
+  {
+    "query_id": "q010",
+    "query": "What are the complications of hip fracture and how are they managed?",
+    "category": "in_scope_broad",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.9",
+    "expected_min_top1_similarity": 0.50,
+    "ground_truth_chunk_ids": ["NICE_CG124_p14_c001", "NICE_CG124_p14_c002"],
+    "notes": "Complications"
+  },
+  {
+    "query_id": "q011",
+    "query": "Is there a role for bisphosphonates in hip fracture management?",
+    "category": "in_scope_broad",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.6",
+    "expected_min_top1_similarity": 0.45,
+    "ground_truth_chunk_ids": ["NICE_CG124_p09_c001"],
+    "notes": "Bisphosphonate use"
+  },
+  {
+    "query_id": "q012",
+    "query": "What is the recommended follow-up for patients after hip fracture?",
+    "category": "in_scope_broad",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.10",
+    "expected_min_top1_similarity": 0.50,
+    "ground_truth_chunk_ids": ["NICE_CG124_p15_c001"],
+    "notes": "Follow-up"
+  },
+  {
+    "query_id": "q013",
+    "query": "How does the guideline address osteoporosis screening in men?",
+    "category": "edge_cases",
+    "expected_document": "USPSTF_Osteoporosis.pdf",
+    "expected_section": "3",
+    "expected_min_top1_similarity": 0.40,
+    "ground_truth_chunk_ids": ["USPSTF_OST_p07_c001"],
+    "notes": "Men screening"
+  },
+  {
+    "query_id": "q014",
+    "query": "What are the contraindications for paracetamol in hip fracture patients?",
+    "category": "edge_cases",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.3",
+    "expected_min_top1_similarity": 0.50,
+    "ground_truth_chunk_ids": ["NICE_CG124_p08_c002"],
+    "notes": "Contraindications"
+  },
+  {
+    "query_id": "q015",
+    "query": "What is the definition of a hip fracture according to NICE?",
+    "category": "in_scope_direct",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "0.0",
+    "expected_min_top1_similarity": 0.60,
+    "ground_truth_chunk_ids": ["NICE_CG124_p03_c001"],
+    "notes": "Definition"
+  }
+]
