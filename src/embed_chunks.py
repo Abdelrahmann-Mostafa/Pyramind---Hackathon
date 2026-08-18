@@ -1,28 +1,9 @@
 """
-Embedding Layer (src/embed_chunks.py)
---------------------------------------
-Loads section-aware chunks produced by ingestion.py (data/processed_chunks.json)
-and generates dense vector embeddings using a domain-specific biomedical
-sentence embedding model.
-
-Model chosen: pritamdeka/S-PubMedBert-MS-MARCO
-------------------------------------------------
-- Pretrained from scratch on PubMed abstracts/full text (PubMedBERT), so it
-  already understands clinical vocabulary relevant to these guidelines
-  (DXA, FRAX, bisphosphonate, postmenopausal, etc.) rather than treating
-  them as rare/out-of-vocabulary tokens the way a general-purpose model would.
-- Fine-tuned on MS MARCO-style query/passage pairs adapted to biomedical
-  text, so it is optimized specifically for retrieval (matching a clinical
-  question to the passage that answers it) rather than generic sentence
-  similarity — a direct match for this RAG use case.
-- Runs locally via sentence-transformers: no API key, no per-token cost,
-  deterministic output, and no data leaves this machine.
-- Fixed, versioned HF model ID, so the embedding space stays stable across
-  ingestion runs (mixing embedding models across chunks silently breaks
-  retrieval quality).
-
-Output: data/chunk_embeddings.json — each chunk's original metadata plus
-its embedding vector, keyed by chunk_id.
+Day 1: Embedding Generation
+============================
+Loads child chunks from processed_chunks.json and generates dense embeddings
+using S-PubMedBert. Only children are embedded for vector search.
+Outputs chunk_embeddings.json with embeddings attached.
 """
 
 import os
@@ -35,15 +16,14 @@ from sentence_transformers import SentenceTransformer
 MODEL_NAME = "pritamdeka/S-PubMedBert-MS-MARCO"
 
 
-def load_chunks(input_file: str = "data/processed_chunks.json") -> List[Dict[str, Any]]:
-    """Loads section-aware chunks produced by the ingestion pipeline."""
+def load_child_chunks(input_file: str = "data/processed_chunks.json") -> List[Dict[str, Any]]:
+    """Load only child chunks (is_parent=False) from the processed chunks file."""
     input_path = Path(input_file)
     if not input_path.exists():
-        raise FileNotFoundError(
-            f"Chunk file not found: {input_file}. Run ingestion.py first."
-        )
+        raise FileNotFoundError(f"Chunk file not found: {input_file}. Run ingestion.py first.")
     with open(input_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+        all_chunks = json.load(f)
+    return [c for c in all_chunks if not c.get("is_parent", False)]
 
 
 def embed_chunks(
@@ -52,14 +32,14 @@ def embed_chunks(
     batch_size: int = 32,
 ) -> List[Dict[str, Any]]:
     """
-    Generates dense embeddings for each chunk's content field and attaches
-    the resulting vector to the chunk's existing metadata.
+    Generate normalized embeddings for each chunk's embedding_text field.
+    Returns a copy of chunks with embedding, embedding_model, embedding_dim added.
     """
     print(f"[+] Loading embedding model: {model_name}")
     model = SentenceTransformer(model_name)
 
-    texts = [chunk["content"] for chunk in chunks]
-    print(f"[+] Embedding {len(texts)} chunks (batch_size={batch_size})...")
+    texts = [chunk["embedding_text"] for chunk in chunks]
+    print(f"[+] Embedding {len(texts)} child chunks (batch_size={batch_size})...")
 
     embeddings = model.encode(
         texts,
@@ -70,12 +50,11 @@ def embed_chunks(
 
     embedded_chunks = []
     for chunk, vector in zip(chunks, embeddings):
-        embedded_chunks.append({
-            **chunk,
-            "embedding": vector.tolist(),
-            "embedding_model": model_name,
-            "embedding_dim": len(vector),
-        })
+        new_chunk = chunk.copy()
+        new_chunk["embedding"] = vector.tolist()
+        new_chunk["embedding_model"] = model_name
+        new_chunk["embedding_dim"] = len(vector)
+        embedded_chunks.append(new_chunk)
 
     return embedded_chunks
 
@@ -85,15 +64,15 @@ def run_embedding_pipeline(
     output_file: str = "data/chunk_embeddings.json",
     model_name: str = MODEL_NAME,
 ) -> List[Dict[str, Any]]:
-    """Executes the end-to-end embedding pipeline over processed chunks."""
+    """Execute the embedding pipeline over child chunks."""
     os.makedirs(Path(output_file).parent, exist_ok=True)
 
     print("=" * 80)
     print("CHUNK EMBEDDING PIPELINE")
     print("=" * 80)
 
-    chunks = load_chunks(input_file)
-    print(f"[+] Loaded {len(chunks)} chunks from {input_file}")
+    chunks = load_child_chunks(input_file)
+    print(f"[+] Loaded {len(chunks)} child chunks from {input_file}")
 
     embedded_chunks = embed_chunks(chunks, model_name=model_name)
 
@@ -101,7 +80,7 @@ def run_embedding_pipeline(
         json.dump(embedded_chunks, f, indent=2, ensure_ascii=False)
 
     print("\n" + "=" * 80)
-    print(f"PIPELINE COMPLETE: Embedded {len(embedded_chunks)} chunks with '{model_name}'.")
+    print(f"PIPELINE COMPLETE: Embedded {len(embedded_chunks)} child chunks with '{model_name}'.")
     print(f"Output saved to: {output_file}")
     print("=" * 80)
 
