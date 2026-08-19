@@ -184,11 +184,19 @@ if submit_button and query_input:
             with st.expander(f"🔍 Retrieval (Top {top_k} Chunks)", expanded=False):
                 if response.retrieval_scores:
                     st.write(f"**Max Similarity Score:** {max(response.retrieval_scores):.2%}")
-                    for i, score in enumerate(response.retrieval_scores):
-                        st.markdown(f"- Chunk {i+1}: Similarity **{score:.2%}**")
-                    if response.status == "SUCCESS":
-                         for cit in response.citations:
-                              st.markdown(f"**Source:** {cit.document_name} § {cit.section_number} - {cit.section_title} (p. {cit.page_number}) [Chunk ID: `{cit.chunk_id}`]")
+
+                    # If we have citations (SUCCESS case), show detailed mapping with chunk IDs
+                    if response.status == "SUCCESS" and response.citations:
+                        for i, (score, cit) in enumerate(zip(response.retrieval_scores, response.citations)):
+                            st.markdown(
+                                f"- **Chunk {i+1}:** Similarity **{score:.2%}** | "
+                                f"Chunk ID: `{cit.chunk_id}` | "
+                                f"Source: {cit.document_name} § {cit.section_number} - {cit.section_title} (p. {cit.page_number})"
+                            )
+                    else:
+                        # Fallback: only show scores (e.g., if status is REFUSED)
+                        for i, score in enumerate(response.retrieval_scores):
+                            st.markdown(f"- Chunk {i+1}: Similarity **{score:.2%}**")
                 else:
                     st.write("No chunks retrieved.")
             
