@@ -491,7 +491,7 @@ class RAGPipeline:
         chroma_path: str = "data/chroma_db",
         collection_name: str = "clinical-guidelines",
         embeddings_model: str = "pritamdeka/S-PubMedBert-MS-MARCO",
-        groq_api_key: str = None,
+        groq_api_key: str = "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",
         llm_model: str = "llama-3.3-70b-versatile",
         groq_base_url: str = "https://api.groq.com/openai/v1",
     ):
