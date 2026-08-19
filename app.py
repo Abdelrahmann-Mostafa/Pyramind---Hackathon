@@ -170,7 +170,8 @@ if submit_button and query_input:
                 query=query_input,
                 top_k=top_k,
                 confidence_threshold=confidence_threshold,
-                min_chunks=min_chunks
+                min_chunks=min_chunks,
+                max_tokens = 4096
             )
             
             latency = time.time() - start_time

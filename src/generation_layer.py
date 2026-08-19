@@ -342,8 +342,11 @@ CRITICAL RULES:
 Guideline excerpts:
 {context}
 
-Output JSON only, no markdown formatting."""
-
+Output JSON only, no markdown formatting.Remember: You are ONLY a reference tool.
+ Every word you produce must be verifiable against the excerpts above.Your response must be a valid JSON object with exactly the keys: "recommendation", "supporting_evidence", "is_answerable".
+  Do not include any text outside the JSON.
+  
+"""
     def __init__(
         self,
         api_key: str,
@@ -390,7 +393,7 @@ Output JSON only, no markdown formatting."""
         query: str,
         retrieved_chunks: List[dict],
         temperature: float = 0.15,
-        max_tokens: int = 512,  # ✅ REDUCED from 1024 (50% savings)
+        max_tokens: int = 4096# ✅ REDUCED from 1024 (50% savings)
     ) -> dict:
         """
         Generate grounded response with optimized parameters.
@@ -420,12 +423,23 @@ Output JSON only, no markdown formatting."""
                 parsed = json.loads(raw_text)
             return parsed
         except json.JSONDecodeError:
-            return {
-                "recommendation": raw_text,
-                "supporting_evidence": [],
-                "is_answerable": True,
-                "_parse_fallback": True,
-            }
+            # Try to extract recommendation from raw text
+            rec_match = re.search(r'"recommendation":\s*"([^"]+)"', raw_text, re.DOTALL)
+            if rec_match:
+                return {
+                    "recommendation": rec_match.group(1),
+                    "supporting_evidence": [],
+                    "is_answerable": True,
+                    "_parse_fallback": True,
+                }
+            else:
+                # If we can't parse anything, treat as not answerable
+                return {
+                    "recommendation": None,
+                    "supporting_evidence": [],
+                    "is_answerable": False,
+                    "refusal_reason": "The model did not produce a valid JSON response."
+                }
 
 
 # ===================================================================
@@ -480,6 +494,7 @@ class RAGPipeline:
         top_k: int = 3,  # ✅ REDUCED from 5 to 3 chunks
         confidence_threshold: float = 0.55,
         min_chunks: int = 2,
+        max_tokens: int = 4096,
     ) -> GroundedResponse:
         """
         Answer a clinical query end-to-end with optimizations.
@@ -553,7 +568,7 @@ class RAGPipeline:
         valid_chunk_ids = {chunk["chunk_id"] for chunk in retrieved_chunks}
 
         # ─── Step 5: LLM GENERATION ───
-        llm_output = self.llm.generate(query, retrieved_chunks)
+        llm_output = self.llm.generate(query, retrieved_chunks, max_tokens=max_tokens)
 
         # ─── Step 6: HANDLE LLM REFUSAL ───
         if not llm_output.get("is_answerable", True):
