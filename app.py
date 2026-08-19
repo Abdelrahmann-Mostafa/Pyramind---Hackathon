@@ -86,7 +86,9 @@ def get_pipeline(api_key: str):
     try:
         return RAGPipeline(
             chroma_path=str(chroma_path),
-            groq_api_key=api_key
+            groq_api_key=api_key,
+            groq_base_url="https://api.groq.com/openai/v1",
+            llm_model="llama-3.3-70b-versatile" 
         )
     except Exception as e:
         if "does not exist" in str(e):
