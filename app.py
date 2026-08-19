@@ -49,14 +49,66 @@ st.markdown("""
 # Initialization & Caching
 # ==============================================================================
 
+from pathlib import Path
+
 @st.cache_resource
 def get_pipeline(api_key: str):
     """Initialize the RAG pipeline once and cache it."""
+    # Find the correct path to chroma_db (Colab notebook moves 'data' up one directory)
+    chroma_path = Path("data/chroma_db")
+    if not chroma_path.exists() and Path("../data/chroma_db").exists():
+        chroma_path = Path("../data/chroma_db")
+        
+    # Verify ChromaDB database is ready before initializing pipeline
+    if not chroma_path.exists():
+        st.error("""
+        ❌ **Database Not Initialized**
+        
+        The ChromaDB database hasn't been created yet.
+        
+        **Please follow these steps:**
+        1. Open terminal and run:
+           ```bash
+           jupyter notebook notebooks/01_embed_and_store_chroma_FIXED.ipynb
+           ```
+        2. Execute all cells in order (takes ~10 minutes)
+        3. Come back and reload this page
+        
+        **What the notebook does:**
+        - Ingests medical guideline chunks
+        - Generates 768-dimensional embeddings
+        - Creates ChromaDB index
+        - Runs evaluation on test queries
+        """)
+        st.stop()
+        
     # Ensure environment variables are loaded or passed
-    return RAGPipeline(
-        chroma_path="data/chroma_db",
-        groq_api_key=api_key
-    )
+    try:
+        return RAGPipeline(
+            chroma_path=str(chroma_path),
+            groq_api_key=api_key
+        )
+    except Exception as e:
+        if "does not exist" in str(e):
+            st.error(f"""
+            ❌ **Collection Not Found**
+            
+            The ChromaDB database exists, but the collection could not be found. 
+            If you downloaded this database from Colab or another system, it might be corrupted or incompatible with this environment.
+            
+            **Please delete the `data/chroma_db` folder and recreate it by running:**
+            1. Open terminal and run:
+               ```bash
+               jupyter notebook notebooks/01_embed_and_store_chroma_FIXED.ipynb
+               ```
+            2. Execute all cells in order
+            
+            Detailed error: `{str(e)}`
+            """)
+            st.stop()
+        else:
+            st.error(f"Failed to initialize RAG pipeline: {str(e)}")
+            st.stop()
 
 # ==============================================================================
 # Sidebar UI
