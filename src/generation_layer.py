@@ -97,7 +97,7 @@ class GroundedResponse(BaseModel):
 
     # --- Metadata ---
     timestamp: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
-    model_used: str = Field(default="llama-3.3-70b-versatile")
+    model_used: str = Field(default="openai/gpt-oss-120b")
     retrieval_scores: List[float] = Field(default_factory=list, description="Similarity scores from retrieval")
 
     def format_for_display(self) -> str:
@@ -347,7 +347,7 @@ Output JSON only, no markdown formatting."""
     def __init__(
         self,
         api_key: str,
-        model: str = "llama-3.3-70b-versatile",  # ✅ FIXED: WAS llama-3.1-8b-instant
+        model: str = "openai/gpt-oss-120b",
         base_url: str = "https://api.groq.com/openai/v1",
     ):
         self.client = OpenAI(
@@ -449,7 +449,7 @@ class RAGPipeline:
         collection_name: str = "clinical-guidelines",
         embeddings_model: str = "pritamdeka/S-PubMedBert-MS-MARCO",
         groq_api_key: str = None,
-        llm_model: str = "llama-3.3-70b-versatile",  # ✅ FIXED
+        llm_model: str = "openai/gpt-oss-120b",
         groq_base_url: str = "https://api.groq.com/openai/v1",
     ):
         # Load ChromaDB
