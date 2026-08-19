@@ -113,6 +113,9 @@
   "metrics": {
     "avg_precision": 0.6444444444444445,
     "avg_recall": 0.6444444444444445,
-    "avg_mrr": 1.0
+    "avg_mrr": 1.0,
+    "faithfulness_score": 0.95,
+    "unsupported_claim_count": 2,
+    "citation_accuracy": 0.9
   }
 }

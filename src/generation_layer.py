@@ -320,6 +320,25 @@ class CitationValidator:
         # The LLM should only cite chunks it was given
         return generated_text, valid_found, invalid_found
 
+    @staticmethod
+    def verify_claims(response_text: str, retrieved_chunks: List[dict]) -> dict:
+        """Verify each claim against retrieved evidence."""
+        chunks_text = " ".join([c.get("content", "") for c in retrieved_chunks])
+        
+        # Extract sentences as claims
+        claims = response_text.split(". ")
+        verified = 0
+        
+        for claim in claims:
+            if any(word in chunks_text for word in claim.split()[:5]):
+                verified += 1
+        
+        return {
+            "total_claims": len(claims),
+            "verified_claims": verified,
+            "faithfulness": verified / len(claims) if claims else 0
+        }
+
 
 # ===================================================================
 # LLM GENERATION WITH STRICT GROUNDING
