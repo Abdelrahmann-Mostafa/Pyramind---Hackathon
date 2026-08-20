@@ -42,20 +42,6 @@ body {
 /* ====================================================================
    CARDS & BOXES
    ==================================================================== */
-.answer-card {
-    background: white;
-    border-radius: 20px;
-    padding: 1rem 1.5rem;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
-    border-left: 8px solid #2e86de;
-    margin: 1.5rem 0 2rem 0;
-    transition: box-shadow 0.25s ease;
-}
-
-.answer-card:hover {
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
-}
-
 .citation-box {
     background-color: #f8faff;
     border-left: 6px solid #2e86de;
@@ -235,18 +221,23 @@ body {
 }
 
 /* ====================================================================
+   RTL FIX – FORCE LTR FOR SLIDERS & INPUTS
+   ==================================================================== */
+.stSlider, .stSlider > div, .stSlider input[type="range"] {
+    direction: ltr !important;
+}
+.stTextInput input, .stSelectbox, .stNumberInput {
+    direction: ltr !important;
+}
+
+/* ====================================================================
    RESPONSIVE TWEAKS
    ==================================================================== */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2rem;
     }
-
     .hero {
         padding: 1.5rem;
-    }
-
-    .answer-card {
-        padding: 1rem;
     }
 }

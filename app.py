@@ -5,13 +5,8 @@ import time
 import json
 from pathlib import Path
 
-# Ensure the app can find the 'src' module
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from src.generation_layer import RAGPipeline
-
-# ==============================================================================
-# Page Configuration
-# ==============================================================================
 
 st.set_page_config(
     page_title="Clinical Decision Support RAG",
@@ -20,22 +15,15 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# ==============================================================================
-# Load External CSS
-# ==============================================================================
-
 def load_css(file_name="styles.css"):
-    """Load custom CSS from file."""
     try:
         with open(file_name, "r") as f:
             css = f.read()
         st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
     except FileNotFoundError:
-        # Fallback: use minimal inline styles if file missing
         st.markdown("""
         <style>
             .hero { background: #f0f4f8; padding: 1.5rem; border-radius: 20px; }
-            .answer-card { background: white; border-left: 6px solid #2e86de; padding: 1.5rem; border-radius: 12px; }
             .citation-box { background: #f8faff; border-left: 4px solid #2e86de; padding: 0.8rem; margin: 0.5rem 0; }
             .confidence-high { color: #1e7e34; font-weight: bold; }
             .confidence-medium { color: #856404; font-weight: bold; }
@@ -46,24 +34,14 @@ def load_css(file_name="styles.css"):
 
 load_css()
 
-# ==============================================================================
-# Initialization & Caching
-# ==============================================================================
-
 @st.cache_resource
 def get_pipeline(api_key: str):
-    """Initialize the RAG pipeline once and cache it."""
     chroma_path = Path("data/chroma_db")
     if not chroma_path.exists() and Path("../data/chroma_db").exists():
         chroma_path = Path("../data/chroma_db")
-
     if not chroma_path.exists():
-        st.error("""
-        ❌ **Database Not Initialized**
-        Please run the ingestion notebook first.
-        """)
+        st.error("❌ Database not initialized. Run ingestion notebook.")
         st.stop()
-
     try:
         return RAGPipeline(
             chroma_path=str(chroma_path),
@@ -75,31 +53,19 @@ def get_pipeline(api_key: str):
         st.error(f"Failed to initialize RAG pipeline: {str(e)}")
         st.stop()
 
-# ==============================================================================
-# Sidebar
-# ==============================================================================
-
 with st.sidebar:
     st.title("⚙️ RAG Settings")
-
-    # API Key
     api_key = st.text_input("Groq API Key", type="password", value=os.environ.get("GROQ_API_KEY", ""))
     if api_key:
         os.environ["GROQ_API_KEY"] = api_key
     else:
         st.warning("Please enter your Groq API Key.")
-
     st.markdown("---")
-
-    # Retrieval Params
     st.subheader("Retrieval Parameters")
-    top_k = st.slider("Top-K Chunks", 1, 10, 5, help="Number of chunks to retrieve.")
+    top_k = st.slider("Top-K Chunks", 1, 10, 5)
     confidence_threshold = st.slider("Confidence Threshold", 0.0, 1.0, 0.55, 0.05)
     min_chunks = st.slider("Min Required Chunks", 1, 5, 2)
-
     st.markdown("---")
-
-    # Demo Queries
     st.subheader("🧪 Demo Queries")
     demo_queries = {
         "Select a demo query...": "",
@@ -109,19 +75,11 @@ with st.sidebar:
         "Out-of-scope: COVID (Safety Test)": "What treatment do you recommend for COVID-19?"
     }
     selected_demo = st.selectbox("Pre-loaded examples", list(demo_queries.keys()))
-
     st.markdown("---")
-
-    # Query History
     st.subheader("📜 History")
     if "history" not in st.session_state:
         st.session_state.history = []
 
-# ==============================================================================
-# Main UI
-# ==============================================================================
-
-# Hero Section
 st.markdown("""
 <div class="hero">
     <h1>⚕️ Clinical Decision Support System</h1>
@@ -129,7 +87,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Query Input Area (two columns)
 col_input, col_button = st.columns([4, 1])
 with col_input:
     query_input = st.text_input(
@@ -141,21 +98,15 @@ with col_input:
 with col_button:
     submit_button = st.button("Generate Answer", type="primary", use_container_width=True, disabled=not api_key)
 
-# Store query in history if submitted
 if submit_button and query_input:
     if query_input not in st.session_state.history:
         st.session_state.history.append(query_input)
         if len(st.session_state.history) > 10:
             st.session_state.history.pop(0)
 
-# Show history in sidebar
 if st.session_state.history:
     for q in st.session_state.history[-5:][::-1]:
         st.sidebar.markdown(f'<div class="history-item">{q[:60]}{"..." if len(q)>60 else ""}</div>', unsafe_allow_html=True)
-
-# ==============================================================================
-# Processing and Display
-# ==============================================================================
 
 if submit_button and query_input:
     with st.spinner("Processing query through RAG pipeline..."):
@@ -173,10 +124,7 @@ if submit_button and query_input:
 
             latency = time.time() - start_time
 
-            # ---- Reasoning Trail ----
             st.markdown("### Reasoning Trail")
-
-            # Retrieval expander
             with st.expander(f"🔍 Retrieval (Top {top_k} Chunks)", expanded=False):
                 if response.retrieval_scores:
                     st.write(f"**Max Similarity Score:** {max(response.retrieval_scores):.2%}")
@@ -195,13 +143,9 @@ if submit_button and query_input:
 
             st.markdown("---")
 
-            # ---- Answer Section ----
+            # ---- Answer Section (NO CARD) ----
             if response.status == "SUCCESS":
-                # Only show the answer card if there's a recommendation
                 if response.recommendation:
-                    st.markdown('<div class="answer-card">', unsafe_allow_html=True)
-
-                    # Confidence badge
                     conf_map = {
                         "High": "confidence-high",
                         "Medium": "confidence-medium",
@@ -224,14 +168,9 @@ if submit_button and query_input:
                                 <strong>Source Chunk:</strong> <code>{ev.chunk_id}</code>
                             </div>
                             """, unsafe_allow_html=True)
-
-                    st.markdown('</div>', unsafe_allow_html=True)
                 else:
-                    # Fallback – should not happen with a proper response
-                    st.info("The model did not produce a recommendation. Please try rephrasing your query.")
-
+                    st.info("The model did not produce a recommendation.")
             else:
-                # Refusal
                 st.markdown("### ❌ Query Refused")
                 st.markdown(f"""
                 <div class="refusal-box">
@@ -244,17 +183,14 @@ if submit_button and query_input:
                 if response.context_lacking:
                     st.write(f"**Context lacking:** {response.context_lacking}")
 
-            # ---- Metadata & Disclaimer ----
             st.markdown("---")
             col1, col2 = st.columns(2)
             with col1:
                 st.caption(f"⏱️ **Latency:** {latency:.2f}s")
             with col2:
                 st.caption(f"🧠 **Model:** {response.model_used}")
-
             st.caption(f"_{response.clinical_disclaimer}_")
 
-            # Debug expander
             with st.expander("🛠️ Debug: Raw JSON Response"):
                 st.json(json.loads(response.to_json()))
 
@@ -262,7 +198,6 @@ if submit_button and query_input:
             st.error(f"An error occurred: {str(e)}")
             st.exception(e)
 
-# Footer
 st.markdown("""
 <div class="footer">
     ⚕️ Disclaimer: This tool provides educational decision support only. Always consult a qualified clinician.
