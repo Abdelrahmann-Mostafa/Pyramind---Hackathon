@@ -14,8 +14,8 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 from openai import OpenAI
 
-from hypertension_safety_filter import HypertensionSafetyFilter
-from hypertension_system_prompt import HYPERTENSION_SYSTEM_PROMPT
+from src.hypertension_safety_filter import HypertensionSafetyFilter
+from src.hypertension_system_prompt import HYPERTENSION_SYSTEM_PROMPT
 
 
 # ===================================================================
@@ -55,7 +55,7 @@ class GroundedResponse(BaseModel):
     ))
     refusal_reason: Optional[str] = Field(default=None)
     timestamp: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
-    model_used: str = Field(default="llama-3.3-70b-versatile")
+    model_used: str = Field(default="openai/gpt-oss-120b")
 
     def format_for_display(self) -> str:
         """Format for console display."""
@@ -110,7 +110,7 @@ class GroundedResponse(BaseModel):
 class GroundedLLMGenerator:
     """Generate grounded responses using Claude."""
 
-    def __init__(self, api_key: str = None, model: str = "llama-3.3-70b-versatile"):
+    def __init__(self, api_key: str = None, model: str = "openai/gpt-oss-120b"):
         self.client = OpenAI(
             api_key=api_key or os.getenv("GROQ_API_KEY"),
             base_url="https://api.groq.com/openai/v1",
