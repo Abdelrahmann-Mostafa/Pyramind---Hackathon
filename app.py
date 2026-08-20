@@ -197,33 +197,38 @@ if submit_button and query_input:
 
             # ---- Answer Section ----
             if response.status == "SUCCESS":
-                st.markdown('<div class="answer-card">', unsafe_allow_html=True)
+                # Only show the answer card if there's a recommendation
+                if response.recommendation:
+                    st.markdown('<div class="answer-card">', unsafe_allow_html=True)
 
-                # Confidence badge
-                conf_map = {
-                    "High": "confidence-high",
-                    "Medium": "confidence-medium",
-                    "Low": "confidence-low",
-                    "Insufficient Evidence": "confidence-insufficient"
-                }
-                badge_class = conf_map.get(response.confidence_level, "confidence-insufficient")
-                st.markdown(f'<span class="{badge_class}">🎯 {response.confidence_level} Confidence</span>', unsafe_allow_html=True)
+                    # Confidence badge
+                    conf_map = {
+                        "High": "confidence-high",
+                        "Medium": "confidence-medium",
+                        "Low": "confidence-low",
+                        "Insufficient Evidence": "confidence-insufficient"
+                    }
+                    badge_class = conf_map.get(response.confidence_level, "confidence-insufficient")
+                    st.markdown(f'<span class="{badge_class}">🎯 {response.confidence_level} Confidence</span>', unsafe_allow_html=True)
 
-                st.markdown("### 📋 Recommendation")
-                st.markdown(f"<p style='font-size:1.2rem;'>{response.recommendation}</p>", unsafe_allow_html=True)
+                    st.markdown("### 📋 Recommendation")
+                    st.markdown(f"<p style='font-size:1.2rem;'>{response.recommendation}</p>", unsafe_allow_html=True)
 
-                if response.supporting_evidence:
-                    st.markdown("#### 📎 Supporting Evidence")
-                    for ev in response.supporting_evidence:
-                        st.markdown(f"""
-                        <div class="citation-box">
-                            <strong>Claim:</strong> {ev.claim}<br/>
-                            <strong>Excerpt:</strong> <em>"{ev.excerpt}"</em><br/>
-                            <strong>Source Chunk:</strong> <code>{ev.chunk_id}</code>
-                        </div>
-                        """, unsafe_allow_html=True)
+                    if response.supporting_evidence:
+                        st.markdown("#### 📎 Supporting Evidence")
+                        for ev in response.supporting_evidence:
+                            st.markdown(f"""
+                            <div class="citation-box">
+                                <strong>Claim:</strong> {ev.claim}<br/>
+                                <strong>Excerpt:</strong> <em>"{ev.excerpt}"</em><br/>
+                                <strong>Source Chunk:</strong> <code>{ev.chunk_id}</code>
+                            </div>
+                            """, unsafe_allow_html=True)
 
-                st.markdown('</div>', unsafe_allow_html=True)
+                    st.markdown('</div>', unsafe_allow_html=True)
+                else:
+                    # Fallback – should not happen with a proper response
+                    st.info("The model did not produce a recommendation. Please try rephrasing your query.")
 
             else:
                 # Refusal

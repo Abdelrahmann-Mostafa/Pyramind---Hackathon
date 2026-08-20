@@ -160,16 +160,26 @@ body {
 }
 
 /* ====================================================================
-   EXPANDERS
+   EXPANDERS – MOVED ARROW TO LEFT
    ==================================================================== */
 .streamlit-expanderHeader {
     font-weight: 600;
     color: #1a2a3a;
     border-radius: 12px;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: flex-end !important;
+    gap: 0.5rem !important;
 }
 
 .streamlit-expanderHeader:hover {
     background: rgba(46, 134, 222, 0.04);
+}
+
+.streamlit-expanderHeader .streamlit-expanderIcon {
+    order: -1 !important;
+    margin-left: 0 !important;
+    margin-right: 0.5rem !important;
 }
 
 /* ====================================================================
