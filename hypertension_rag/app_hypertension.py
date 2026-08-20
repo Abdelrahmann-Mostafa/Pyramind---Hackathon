@@ -26,8 +26,8 @@ def load_rag():
     return rag
 
 @st.cache_resource
-def load_agent(rag):
-    return HypertensionAgent(rag)
+def load_agent(_rag):
+    return HypertensionAgent(_rag)
 
 rag = load_rag()
 agent = load_agent(rag)
