@@ -1,26 +1,24 @@
-"""
-Regenerate benchmark_queries.json with ACTUAL chunk IDs from processed_chunks.json
-
-This fixes the ID mismatch issue where benchmark expects old chunk IDs
-that no longer exist after ingestion pipeline changes.
-"""
-
 import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
+import os
 
 def regenerate_benchmark():
     """Regenerate benchmark queries with correct chunk IDs."""
     
     # Load current chunks (from latest ingestion)
-    print("Loading chunks from data/processed_chunks.json...")
-    with open("data/processed_chunks.json", "r") as f:
+    data_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
+    chunks_path = os.path.join(data_dir, "processed_chunks.json")
+    benchmark_path = os.path.join(data_dir, "benchmark_queries.json")
+
+    print(f"Loading chunks from {chunks_path}...")
+    with open(chunks_path, "r") as f:
         chunks = json.load(f)
     print(f"  ✅ Found {len(chunks)} chunks\n")
     
     # Load old benchmark (has outdated IDs)
-    print("Loading benchmark from data/benchmark_queries.json...")
-    with open("data/benchmark_queries.json", "r") as f:
+    print(f"Loading benchmark from {benchmark_path}...")
+    with open(benchmark_path, "r") as f:
         old_benchmark = json.load(f)
     print(f"  ✅ Found {len(old_benchmark)} benchmark queries\n")
     
@@ -82,11 +80,10 @@ def regenerate_benchmark():
     print("SAVING REGENERATED BENCHMARK")
     print("="*70)
     
-    output_file = "data/benchmark_queries.json"
-    with open(output_file, "w") as f:
+    with open(benchmark_path, "w") as f:
         json.dump(new_benchmark, f, indent=2)
     
-    print(f"\n✅ Saved regenerated benchmark to {output_file}")
+    print(f"\n✅ Saved regenerated benchmark to {benchmark_path}")
     print(f"   {len(new_benchmark)} queries updated with correct chunk IDs\n")
     
     # Summary
