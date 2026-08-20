@@ -71,10 +71,10 @@ if prompt := st.chat_input("Ask about hypertension management..."):
 # Example queries
 with st.expander("📚 Example Questions"):
     examples = [
-        "What is the recommended blood pressure target for patients with diabetes?",
-        "How should elderly patients with hypertension be managed?",
-        "What are the first-line antihypertensive drugs?",
-        "I'm 62 with diabetes – what's my BP target?",
+        "What is the recommended venous thromboembolism prophylaxis for abortion?",
+        "Are women allowed to expel at home for medical abortion up to 10+0 weeks?",
+        "What types of anaesthesia and sedation should be offered for surgical abortion?",
+        "What follow-up and support should be provided after an abortion?",
     ]
     for example in examples:
         if st.button(f"Try: {example}", use_container_width=True):
