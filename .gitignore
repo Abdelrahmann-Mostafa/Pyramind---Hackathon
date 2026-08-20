@@ -10,7 +10,7 @@ build/
 .vscode/
 .idea/
 *.swp
-
+NAV/
 # OS
 .DS_Store
 Thumbs.db
