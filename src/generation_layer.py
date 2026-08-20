@@ -169,9 +169,8 @@ class GroundedResponse(BaseModel):
 # ===================================================================
 
 class SafetyFilter:
-    """Pre-retrieval safety filter: detects out-of-scope queries."""
-
     OUT_OF_SCOPE_KEYWORDS = {
+        # Conditions NOT covered by bone fracture guidelines
         "covid", "coronavirus", "diabetes", "heart disease", "cardiac arrest",
         "myocardial infarction", "stroke", "neurological", "parkinson",
         "alzheimer", "cancer", "tumor", "oncology", "lung cancer",
@@ -182,23 +181,33 @@ class SafetyFilter:
         "kidney disease", "renal failure", "dialysis", "transplant",
         "autoimmune", "rheumatoid arthritis", "gout", "lupus",
         "dermatology", "psoriasis", "eczema", "insomnia",
+        # Additional non-fracture conditions
+        "hypertension", "stroke", "diabetes", "asthma", "copd"
     }
 
     IN_SCOPE_KEYWORDS = {
-        "hip fracture", "osteoporosis", "bone density", "fracture risk",
+        # Conditions we CAN answer about – bone fractures and related care
+        "fracture", "bone", "orthopedic", "orthopaedic", "trauma",
+        "cast", "splint", "immobilization", "mobilisation",
+        "reduction", "fixation", "intramedullary", "plate", "screw",
+        "external fixation", "traction", "analgesia", "pain management",
+        "surgery", "surgical", "operative", "non-operative",
+        "conservative", "rehabilitation", "physiotherapy",
+        "weight-bearing", "non-weight-bearing", "ambulation",
+        "fall", "fragility fracture", "osteoporosis", "bone density",
+        "hip fracture", "femoral", "subtrochanteric", "intracapsular",
+        "extracapsular", "arthroplasty", "hemiarthroplasty",
+        "vertebral", "compression fracture", "pelvic fracture",
+        "ankle fracture", "wrist fracture", "colles", "scaphoid",
+        "tibia", "fibula", "radius", "ulna", "humerus", "clavicle",
+        "rib fracture", "sternum", "scapula", "metacarpal", "metatarsal",
+        "children", "paediatric", "elderly", "geriatric",
         "screening", "dxa", "dexa", "t-score", "frax", "qfracture",
         "bisphosphonate", "alendronate", "risedronate", "ibandronate",
         "zoledronic", "hormone replacement", "hrt", "calcium", "vitamin d",
-        "elderly", "older adults", "women", "men", "postmenopausal",
-        "menopause", "analgesia", "pain management", "surgery", "surgical",
-        "orthopedic", "orthopaedic", "geriatric", "rehabilitation",
-        "mobilisation", "mobilization", "physiotherapy", "fall",
-        "fragility fracture", "vertebral", "femoral", "hip",
-        "subtrochanteric", "intracapsular", "extracapsular",
-        "arthroplasty", "hemiarthroplasty", "intramedullary",
-        "bone", "fracture",
+        "orthogeriatric", "multidisciplinary", "MDT"
     }
-
+    
     @staticmethod
     def check(query: str) -> tuple[bool, Optional[str]]:
         """Returns (is_safe, refusal_reason_if_unsafe)."""
