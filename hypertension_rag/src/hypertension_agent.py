@@ -123,7 +123,7 @@ Start by either understanding the patient's situation or asking clarifying quest
             
             # Call Groq with tools
             response = self.client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model="openai/gpt-oss-120b",
                 max_tokens=1024,
                 tools=self.tools(),
                 tool_choice="auto",
