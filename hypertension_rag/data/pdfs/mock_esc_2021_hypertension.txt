@@ -1,0 +1,56 @@
+ESC 2021 Guidelines for the management of cardiovascular disease in patients with diabetes
+
+§ 1. Introduction
+Blood pressure management is critical in diabetes management. This guideline provides recommendations for screening, diagnosis, and treatment.
+
+§ 2. Screening and Diagnosis
+2.1 Hypertension prevalence
+Hypertension affects approximately 70% of patients with type 2 diabetes.
+
+2.2 Blood pressure measurement
+Office blood pressure should be measured using validated automatic devices.
+Recommended frequency: Annual screening for all patients.
+
+§ 3. Risk Stratification
+3.1 Cardiovascular risk assessment
+Risk categories: Low (<10% 10-year CVD risk), Intermediate (10-20%), High (>20%)
+
+3.2 Target Blood Pressure by Risk Category
+- Low risk: Target <140/90 mmHg
+- Intermediate risk: Target <130/80 mmHg
+- High risk: Target <130/80 mmHg (consider <120/70 mmHg if tolerated)
+
+§ 4. Treatment Recommendations
+4.1 Lifestyle modifications (first-line)
+- DASH diet
+- Weight reduction (target: 5-10% reduction)
+- Physical activity: 150 min/week moderate intensity
+- Sodium restriction: <5g/day
+
+4.2 Pharmacological treatment
+4.2.1 Initial therapy
+ACE inhibitors or ARBs are recommended as first-line agents in diabetes.
+Calcium channel blockers are alternative first-line agents.
+Beta-blockers should be used cautiously in diabetes (metabolic side effects).
+
+4.2.2 Drug combinations
+For most patients requiring 2+ drugs: ACE-I/ARB + Calcium channel blocker or Thiazide diuretic
+
+4.3 Special populations
+4.3.1 Elderly patients (age ≥65)
+Target: <140/90 mmHg (more conservative than younger patients)
+Titrate carefully due to orthostatic hypotension risk
+
+4.3.2 Patients with chronic kidney disease
+ACE-I or ARB recommended regardless of BP (renal protection)
+Target: <120 mmHg systolic if eGFR <30
+
+§ 5. Monitoring
+5.1 Follow-up intervals
+- After therapy initiation: 2-4 weeks
+- After dose adjustment: 2-4 weeks
+- Stable patients: Every 3-6 months
+
+5.2 Home blood pressure monitoring
+Encouraged for all patients on treatment
+Normal: <130/80 mmHg

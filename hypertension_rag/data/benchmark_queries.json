@@ -1,0 +1,302 @@
+[
+  {
+    "query_id": "q001",
+    "query": "What analgesia is recommended postoperatively for hip fracture patients?",
+    "category": "in_scope_direct",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.3",
+    "expected_min_top1_similarity": 0.9379104971885681,
+    "ground_truth_chunk_ids": [
+      "NICE_CG124_parent_005",
+      "NICE_CG124_p07_c007",
+      "fractures-complex-assessment-and-management-pdf-1837397402053_parent_006"
+    ],
+    "notes": "Paracetamol, immediate-release opioids, and NSAID recommendations",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "NICE_CG124_parent_005",
+      "NICE_CG124_p07_c007",
+      "fractures-complex-assessment-and-management-pdf-1837397402053_parent_006"
+    ]
+  },
+  {
+    "query_id": "q002",
+    "query": "At what age should vertebral fracture assessment (VFA) be considered during a DXA scan?",
+    "category": "in_scope_direct",
+    "expected_document": "osteoporosis-risk-assessment-pdf-66144025463749.pdf",
+    "expected_section": "1.5.1",
+    "expected_min_top1_similarity": 0.9783524870872498,
+    "ground_truth_chunk_ids": [
+      "osteoporosis-risk-assessment-pdf-66144025463749_parent_020",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p20_c2255",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p21_c2259"
+    ],
+    "notes": "VFA scan age criteria for men aged 70+ and women aged 60+",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "osteoporosis-risk-assessment-pdf-66144025463749_parent_020",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p20_c2255",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p21_c2259"
+    ]
+  },
+  {
+    "query_id": "q003",
+    "query": "When should physiotherapy and mobilisation be offered following hip fracture surgery?",
+    "category": "in_scope_direct",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.7",
+    "expected_min_top1_similarity": 0.9341518878936768,
+    "ground_truth_chunk_ids": [
+      "NICE_CG124_parent_021",
+      "NICE_CG124_p15_c027",
+      "NICE_CG124_p18_c038"
+    ],
+    "notes": "Mobilisation on day after surgery",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "NICE_CG124_parent_021",
+      "NICE_CG124_p15_c027",
+      "NICE_CG124_p18_c038"
+    ]
+  },
+  {
+    "query_id": "q004",
+    "query": "What imaging is recommended if a hip fracture is suspected but initial X-rays are negative?",
+    "category": "in_scope_direct",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.1",
+    "expected_min_top1_similarity": 0.9543335437774658,
+    "ground_truth_chunk_ids": [
+      "NICE_CG124_parent_002",
+      "NICE_CG124_p06_c004",
+      "NICE_CG124_p18_c035"
+    ],
+    "notes": "Occult hip fracture imaging (MRI vs CT)",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "NICE_CG124_parent_002",
+      "NICE_CG124_p06_c004",
+      "NICE_CG124_p18_c035"
+    ]
+  },
+  {
+    "query_id": "q005",
+    "query": "Which risk prediction tools are recommended by NICE for assessing fragility fracture risk?",
+    "category": "in_scope_direct",
+    "expected_document": "osteoporosis-risk-assessment-pdf-66144025463749.pdf",
+    "expected_section": "1.3",
+    "expected_min_top1_similarity": 0.9337378740310669,
+    "ground_truth_chunk_ids": [
+      "sant_2026_oi_260080_1773348767.01225_p02_c2584",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p12_c2242",
+      "osteoporosis-risk-assessment-pdf-66144025463749_parent_009"
+    ],
+    "notes": "FRAX or QFracture tool recommendation",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "sant_2026_oi_260080_1773348767.01225_p02_c2584",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p12_c2242",
+      "osteoporosis-risk-assessment-pdf-66144025463749_parent_009"
+    ]
+  },
+  {
+    "query_id": "q006",
+    "query": "What type of surgical procedure or implant is recommended to treat a subtrochanteric fracture?",
+    "category": "in_scope_direct",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.6",
+    "expected_min_top1_similarity": 0.936883807182312,
+    "ground_truth_chunk_ids": [
+      "NICE_CG124_parent_016",
+      "NICE_CG124_p12_c020",
+      "NICE_CG124_parent_020"
+    ],
+    "notes": "Intramedullary nail recommendation",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "NICE_CG124_parent_016",
+      "NICE_CG124_p12_c020",
+      "NICE_CG124_parent_020"
+    ]
+  },
+  {
+    "query_id": "q007",
+    "query": "What choice of anaesthesia should be offered to patients undergoing hip fracture surgery?",
+    "category": "in_scope_ambiguous",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.4",
+    "expected_min_top1_similarity": 0.9381933212280273,
+    "ground_truth_chunk_ids": [
+      "NICE_CG124_p18_c036",
+      "NICE_CG124_p18_c037",
+      "NICE_CG124_parent_010"
+    ],
+    "notes": "Spinal or general anaesthesia choice",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "NICE_CG124_p18_c036",
+      "NICE_CG124_p18_c037",
+      "NICE_CG124_parent_010"
+    ]
+  },
+  {
+    "query_id": "q008",
+    "query": "Should patients admitted from care or nursing homes be included in post-op rehabilitation?",
+    "category": "in_scope_ambiguous",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.8",
+    "expected_min_top1_similarity": 0.9527479410171509,
+    "ground_truth_chunk_ids": [
+      "NICE_CG124_parent_027",
+      "NICE_CG124_p17_c033",
+      "NICE_CG124_parent_030"
+    ],
+    "notes": "Multidisciplinary management for care home residents",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "NICE_CG124_parent_027",
+      "NICE_CG124_p17_c033",
+      "NICE_CG124_parent_030"
+    ]
+  },
+  {
+    "query_id": "q009",
+    "query": "How often should follow-up DXA scans be scheduled if a patient does not initially meet the treatment threshold?",
+    "category": "in_scope_ambiguous",
+    "expected_document": "osteoporosis-risk-assessment-pdf-66144025463749.pdf",
+    "expected_section": "1.9",
+    "expected_min_top1_similarity": 0.9628430008888245,
+    "ground_truth_chunk_ids": [
+      "osteoporosis-risk-assessment-pdf-66144025463749_p33_c2281",
+      "osteoporosis-risk-assessment-pdf-66144025463749_parent_034",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p33_c2282"
+    ],
+    "notes": "Reassessing BMD intervals (5 years or upon clinical change)",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "osteoporosis-risk-assessment-pdf-66144025463749_p33_c2281",
+      "osteoporosis-risk-assessment-pdf-66144025463749_parent_034",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p33_c2282"
+    ]
+  },
+  {
+    "query_id": "q010",
+    "query": "What acute medical conditions must be addressed prior to hip fracture surgery?",
+    "category": "in_scope_ambiguous",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.2",
+    "expected_min_top1_similarity": 0.9306977987289429,
+    "ground_truth_chunk_ids": [
+      "NICE_CG124_p25_c052",
+      "NICE_CG124_p18_c038",
+      "rodin_2026_oi_260519_1781017042.27221_p02_c2491"
+    ],
+    "notes": "Timing of surgery and correctable conditions",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "NICE_CG124_p25_c052",
+      "NICE_CG124_p18_c038",
+      "rodin_2026_oi_260519_1781017042.27221_p02_c2491"
+    ]
+  },
+  {
+    "query_id": "q011",
+    "query": "What advice should be given to patients who decline or delay osteoporosis treatment?",
+    "category": "in_scope_broad",
+    "expected_document": "osteoporosis-risk-assessment-pdf-66144025463749.pdf",
+    "expected_section": "1.8",
+    "expected_min_top1_similarity": 0.9411649703979492,
+    "ground_truth_chunk_ids": [
+      "osteoporosis-risk-assessment-pdf-66144025463749_p26_c2267",
+      "osteoporosis-risk-assessment-pdf-66144025463749_parent_029",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p29_c2275"
+    ],
+    "notes": "Managing treatment decliners",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "osteoporosis-risk-assessment-pdf-66144025463749_p26_c2267",
+      "osteoporosis-risk-assessment-pdf-66144025463749_parent_029",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p29_c2275"
+    ]
+  },
+  {
+    "query_id": "q012",
+    "query": "How should hip fracture surgery lists be planned and supervised?",
+    "category": "in_scope_broad",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "1.5",
+    "expected_min_top1_similarity": 0.9252315759658813,
+    "ground_truth_chunk_ids": [
+      "NICE_CG124_parent_011",
+      "NICE_CG124_p08_c013",
+      "NICE_CG124_parent_022"
+    ],
+    "notes": "Planned trauma list and consultant supervision",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "NICE_CG124_parent_011",
+      "NICE_CG124_p08_c013",
+      "NICE_CG124_parent_022"
+    ]
+  },
+  {
+    "query_id": "q013",
+    "query": "What is recommended regarding research into using electronic health records for fragility fracture risk assessment?",
+    "category": "edge_cases",
+    "expected_document": "osteoporosis-risk-assessment-pdf-66144025463749.pdf",
+    "expected_section": "1.10",
+    "expected_min_top1_similarity": 0.9784534573554993,
+    "ground_truth_chunk_ids": [
+      "osteoporosis-risk-assessment-pdf-66144025463749_parent_008",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p11_c2234",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p37_c2288"
+    ],
+    "notes": "Research recommendations for EHR risk search",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "osteoporosis-risk-assessment-pdf-66144025463749_parent_008",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p11_c2234",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p37_c2288"
+    ]
+  },
+  {
+    "query_id": "q014",
+    "query": "What research gaps exist regarding regional versus general anaesthesia in hip fracture patients?",
+    "category": "edge_cases",
+    "expected_document": "NICE_CG124.pdf",
+    "expected_section": "3.5",
+    "expected_min_top1_similarity": 0.9563152194023132,
+    "ground_truth_chunk_ids": [
+      "NICE_CG124_p18_c036",
+      "NICE_CG124_p18_c037",
+      "NICE_CG124_p25_c053"
+    ],
+    "notes": "Research gaps for regional vs general anaesthesia",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "NICE_CG124_p18_c036",
+      "NICE_CG124_p18_c037",
+      "NICE_CG124_p25_c053"
+    ]
+  },
+  {
+    "query_id": "q015",
+    "query": "What novel bone density assessment techniques like REMS are listed under research recommendations?",
+    "category": "edge_cases",
+    "expected_document": "osteoporosis-risk-assessment-pdf-66144025463749.pdf",
+    "expected_section": "1.10",
+    "expected_min_top1_similarity": 0.9488442540168762,
+    "ground_truth_chunk_ids": [
+      "osteoporosis-risk-assessment-pdf-66144025463749_p40_c2295",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p37_c2290",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p40_c2294"
+    ],
+    "notes": "Alternative bone density research methods",
+    "regenerated": true,
+    "old_ground_truth_chunk_ids": [
+      "osteoporosis-risk-assessment-pdf-66144025463749_p40_c2295",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p37_c2290",
+      "osteoporosis-risk-assessment-pdf-66144025463749_p40_c2294"
+    ]
+  }
+]
