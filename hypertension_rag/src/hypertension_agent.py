@@ -15,13 +15,13 @@ from typing import List, Dict, Optional
 from openai import OpenAI
 
 class HypertensionAgent:
-    def __init__(self, rag_pipeline, llm_model: str = "llama-3-70b-versatile"):
+    def __init__(self, rag_pipeline, llm_model: str = "openai/gpt-oss-120b"):
         """
         Initialize the hypertension agent.
         
         Args:
             rag_pipeline: HypertensionRAGPipeline instance
-            llm_model: Groq model to use (default: llama-3-70b-versatile)
+            llm_model: Groq model to use (default: openai/gpt-oss-120b)
                        Other options: mixtral-8x7b-32768, llama-3.3-70b-versatile
         """
         self.rag = rag_pipeline
@@ -238,7 +238,7 @@ if __name__ == "__main__":
         sys.exit(1)
     
     print("✅ Initializing agent...")
-    agent = HypertensionAgent(pipeline, llm_model="llama-3-70b-versatile")
+    agent = HypertensionAgent(pipeline, llm_model="openai/gpt-oss-120b")
     agent.reset()
     
     print("\n" + "="*70)
