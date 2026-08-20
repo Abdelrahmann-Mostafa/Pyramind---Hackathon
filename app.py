@@ -3,13 +3,14 @@ import os
 import sys
 import time
 import json
+from pathlib import Path
 
-# Ensure the app can find the 'src' module when run from outside the project directory
+# Ensure the app can find the 'src' module
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from src.generation_layer import RAGPipeline
 
 # ==============================================================================
-# Page Configuration & Styling
+# Page Configuration
 # ==============================================================================
 
 st.set_page_config(
@@ -19,174 +20,166 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for better presentation
-st.markdown("""
-<style>
-    .citation-box {
-        background-color: #f0f2f6;
-        border-left: 4px solid #0066cc;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        border-radius: 4px;
-    }
-    .refusal-box {
-        background-color: #fff3cd;
-        border-left: 4px solid #ffc107;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        border-radius: 4px;
-        color: #856404;
-    }
-    .confidence-high { color: #28a745; font-weight: bold; }
-    .confidence-medium { color: #ffc107; font-weight: bold; }
-    .confidence-low { color: #dc3545; font-weight: bold; }
-    .confidence-insufficient { color: #6c757d; font-weight: bold; }
-</style>
-""", unsafe_allow_html=True)
+# ==============================================================================
+# Load External CSS
+# ==============================================================================
 
+def load_css(file_name="styles.css"):
+    """Load custom CSS from file."""
+    try:
+        with open(file_name, "r") as f:
+            css = f.read()
+        st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
+    except FileNotFoundError:
+        # Fallback: use minimal inline styles if file missing
+        st.markdown("""
+        <style>
+            .hero { background: #f0f4f8; padding: 1.5rem; border-radius: 20px; }
+            .answer-card { background: white; border-left: 6px solid #2e86de; padding: 1.5rem; border-radius: 12px; }
+            .citation-box { background: #f8faff; border-left: 4px solid #2e86de; padding: 0.8rem; margin: 0.5rem 0; }
+            .confidence-high { color: #1e7e34; font-weight: bold; }
+            .confidence-medium { color: #856404; font-weight: bold; }
+            .confidence-low { color: #721c24; font-weight: bold; }
+            .confidence-insufficient { color: #383d41; font-weight: bold; }
+        </style>
+        """, unsafe_allow_html=True)
+
+load_css()
 
 # ==============================================================================
 # Initialization & Caching
 # ==============================================================================
 
-from pathlib import Path
-
 @st.cache_resource
 def get_pipeline(api_key: str):
     """Initialize the RAG pipeline once and cache it."""
-    # Find the correct path to chroma_db (Colab notebook moves 'data' up one directory)
     chroma_path = Path("data/chroma_db")
     if not chroma_path.exists() and Path("../data/chroma_db").exists():
         chroma_path = Path("../data/chroma_db")
-        
-    # Verify ChromaDB database is ready before initializing pipeline
+
     if not chroma_path.exists():
         st.error("""
         ❌ **Database Not Initialized**
-        
-        The ChromaDB database hasn't been created yet.
-        
-        **Please follow these steps:**
-        1. Open terminal and run:
-           ```bash
-           jupyter notebook notebooks/01_embed_and_store_chroma_FIXED.ipynb
-           ```
-        2. Execute all cells in order (takes ~10 minutes)
-        3. Come back and reload this page
-        
-        **What the notebook does:**
-        - Ingests medical guideline chunks
-        - Generates 768-dimensional embeddings
-        - Creates ChromaDB index
-        - Runs evaluation on test queries
+        Please run the ingestion notebook first.
         """)
         st.stop()
-        
-    # Ensure environment variables are loaded or passed
+
     try:
         return RAGPipeline(
             chroma_path=str(chroma_path),
             groq_api_key=api_key,
             groq_base_url="https://api.groq.com/openai/v1",
-            llm_model="openai/gpt-oss-120b" 
+            llm_model="openai/gpt-oss-120b"
         )
     except Exception as e:
-        if "does not exist" in str(e):
-            st.error(f"""
-            ❌ **Collection Not Found**
-            
-            The ChromaDB database exists, but the collection could not be found. 
-            If you downloaded this database from Colab or another system, it might be corrupted or incompatible with this environment.
-            
-            **Please delete the `data/chroma_db` folder and recreate it by running:**
-            1. Open terminal and run:
-               ```bash
-               jupyter notebook notebooks/01_embed_and_store_chroma_FIXED.ipynb
-               ```
-            2. Execute all cells in order
-            
-            Detailed error: `{str(e)}`
-            """)
-            st.stop()
-        else:
-            st.error(f"Failed to initialize RAG pipeline: {str(e)}")
-            st.stop()
+        st.error(f"Failed to initialize RAG pipeline: {str(e)}")
+        st.stop()
 
 # ==============================================================================
-# Sidebar UI
+# Sidebar
 # ==============================================================================
 
-st.sidebar.title("⚙️ RAG Settings")
+with st.sidebar:
+    st.title("⚙️ RAG Settings")
 
-# API Key Handling
-api_key = st.sidebar.text_input("Groq API Key", type="password", value=os.environ.get("GROQ_API_KEY", ""))
-if api_key:
-    os.environ["GROQ_API_KEY"] = api_key
-else:
-    st.sidebar.warning("Please enter your Groq API Key to continue.")
+    # API Key
+    api_key = st.text_input("Groq API Key", type="password", value=os.environ.get("GROQ_API_KEY", ""))
+    if api_key:
+        os.environ["GROQ_API_KEY"] = api_key
+    else:
+        st.warning("Please enter your Groq API Key.")
 
-st.sidebar.markdown("---")
+    st.markdown("---")
 
-# Retrieval Settings
-st.sidebar.subheader("Retrieval Parameters")
-top_k = st.sidebar.slider("Top-K Chunks", min_value=1, max_value=10, value=5, help="Number of chunks to retrieve from the vector database.")
-confidence_threshold = st.sidebar.slider("Confidence Threshold", min_value=0.0, max_value=1.0, value=0.55, step=0.05, help="Minimum similarity score required to attempt an answer.")
-min_chunks = st.sidebar.slider("Min Required Chunks", min_value=1, max_value=5, value=2, help="Minimum number of retrieved chunks passing the threshold required to generate an answer.")
+    # Retrieval Params
+    st.subheader("Retrieval Parameters")
+    top_k = st.slider("Top-K Chunks", 1, 10, 5, help="Number of chunks to retrieve.")
+    confidence_threshold = st.slider("Confidence Threshold", 0.0, 1.0, 0.55, 0.05)
+    min_chunks = st.slider("Min Required Chunks", 1, 5, 2)
 
-st.sidebar.markdown("---")
+    st.markdown("---")
 
-# Demo Queries
-st.sidebar.subheader("🧪 Demo Queries")
-demo_queries = {
-    "Select a demo query...": "",
-    "In-scope: Analgesia": "What is the recommended analgesia for hip fracture patients upon admission?",
-    "In-scope: Imaging": "What imaging is recommended if a hip fracture is suspected but initial X-rays are negative?",
-    "Ambiguous: Screening": "Should all elderly women get osteoporosis screening?",
-    "Out-of-scope: COVID (Safety Test)": "What treatment do you recommend for COVID-19?"
-}
-selected_demo = st.sidebar.selectbox("Pre-loaded examples", list(demo_queries.keys()))
+    # Demo Queries
+    st.subheader("🧪 Demo Queries")
+    demo_queries = {
+        "Select a demo query...": "",
+        "In-scope: Analgesia": "What is the recommended analgesia for hip fracture patients upon admission?",
+        "In-scope: Imaging": "What imaging is recommended if a hip fracture is suspected but initial X-rays are negative?",
+        "Ambiguous: Screening": "Should all elderly women get osteoporosis screening?",
+        "Out-of-scope: COVID (Safety Test)": "What treatment do you recommend for COVID-19?"
+    }
+    selected_demo = st.selectbox("Pre-loaded examples", list(demo_queries.keys()))
 
+    st.markdown("---")
+
+    # Query History
+    st.subheader("📜 History")
+    if "history" not in st.session_state:
+        st.session_state.history = []
 
 # ==============================================================================
 # Main UI
 # ==============================================================================
 
-st.title("⚕️ Clinical Decision Support System")
-st.markdown("An evidence-grounded RAG system for medical guidelines (Hip Fracture & Osteoporosis).")
+# Hero Section
+st.markdown("""
+<div class="hero">
+    <h1>⚕️ Clinical Decision Support System</h1>
+    <p>Evidence‑based recommendations from hip fracture &amp; osteoporosis guidelines</p>
+</div>
+""", unsafe_allow_html=True)
 
-# Determine the query string
-query_input = st.text_input("Enter a clinical query:", value=demo_queries[selected_demo] if selected_demo != "Select a demo query..." else "")
+# Query Input Area (two columns)
+col_input, col_button = st.columns([4, 1])
+with col_input:
+    query_input = st.text_input(
+        "Enter your clinical query:",
+        value=demo_queries[selected_demo] if selected_demo != "Select a demo query..." else "",
+        label_visibility="collapsed",
+        placeholder="e.g., What analgesia is recommended postoperatively?"
+    )
+with col_button:
+    submit_button = st.button("Generate Answer", type="primary", use_container_width=True, disabled=not api_key)
 
-submit_button = st.button("Generate Answer", type="primary", disabled=not api_key)
+# Store query in history if submitted
+if submit_button and query_input:
+    if query_input not in st.session_state.history:
+        st.session_state.history.append(query_input)
+        if len(st.session_state.history) > 10:
+            st.session_state.history.pop(0)
+
+# Show history in sidebar
+if st.session_state.history:
+    for q in st.session_state.history[-5:][::-1]:
+        st.sidebar.markdown(f'<div class="history-item">{q[:60]}{"..." if len(q)>60 else ""}</div>', unsafe_allow_html=True)
+
+# ==============================================================================
+# Processing and Display
+# ==============================================================================
 
 if submit_button and query_input:
     with st.spinner("Processing query through RAG pipeline..."):
         try:
             pipeline = get_pipeline(api_key)
             start_time = time.time()
-            
-            # Execute Pipeline
+
             response = pipeline.answer_query(
                 query=query_input,
                 top_k=top_k,
                 confidence_threshold=confidence_threshold,
                 min_chunks=min_chunks,
-                max_tokens = 4096
+                max_tokens=4096
             )
-            
+
             latency = time.time() - start_time
-            
-            # ---------------------------------------------------------
-            # Display Results (Reasoning Trail Format)
-            # ---------------------------------------------------------
+
+            # ---- Reasoning Trail ----
             st.markdown("### Reasoning Trail")
-            
-            # 1. Retrieval Section
+
+            # Retrieval expander
             with st.expander(f"🔍 Retrieval (Top {top_k} Chunks)", expanded=False):
                 if response.retrieval_scores:
                     st.write(f"**Max Similarity Score:** {max(response.retrieval_scores):.2%}")
-
-                    # If we have citations (SUCCESS case), show detailed mapping with chunk IDs
                     if response.status == "SUCCESS" and response.citations:
                         for i, (score, cit) in enumerate(zip(response.retrieval_scores, response.citations)):
                             st.markdown(
@@ -195,26 +188,30 @@ if submit_button and query_input:
                                 f"Source: {cit.document_name} § {cit.section_number} - {cit.section_title} (p. {cit.page_number})"
                             )
                     else:
-                        # Fallback: only show scores (e.g., if status is REFUSED)
                         for i, score in enumerate(response.retrieval_scores):
                             st.markdown(f"- Chunk {i+1}: Similarity **{score:.2%}**")
                 else:
                     st.write("No chunks retrieved.")
-            
+
             st.markdown("---")
-            
-            # 2. Generation & Answer Section
+
+            # ---- Answer Section ----
             if response.status == "SUCCESS":
-                st.markdown("### ✅ Generated Answer")
-                
+                st.markdown('<div class="answer-card">', unsafe_allow_html=True)
+
                 # Confidence badge
-                conf_class = f"confidence-{response.confidence_level.lower().replace(' ', '-')}"
-                st.markdown(f"**Confidence:** <span class='{conf_class}'>{response.confidence_level}</span>", unsafe_allow_html=True)
-                
-                # Recommendation
-                st.info(response.recommendation)
-                
-                # Citations mapped to claims
+                conf_map = {
+                    "High": "confidence-high",
+                    "Medium": "confidence-medium",
+                    "Low": "confidence-low",
+                    "Insufficient Evidence": "confidence-insufficient"
+                }
+                badge_class = conf_map.get(response.confidence_level, "confidence-insufficient")
+                st.markdown(f'<span class="{badge_class}">🎯 {response.confidence_level} Confidence</span>', unsafe_allow_html=True)
+
+                st.markdown("### 📋 Recommendation")
+                st.markdown(f"<p style='font-size:1.2rem;'>{response.recommendation}</p>", unsafe_allow_html=True)
+
                 if response.supporting_evidence:
                     st.markdown("#### 📎 Supporting Evidence")
                     for ev in response.supporting_evidence:
@@ -225,31 +222,44 @@ if submit_button and query_input:
                             <strong>Source Chunk:</strong> <code>{ev.chunk_id}</code>
                         </div>
                         """, unsafe_allow_html=True)
-                        
+
+                st.markdown('</div>', unsafe_allow_html=True)
+
             else:
-                # Refusal Section
+                # Refusal
                 st.markdown("### ❌ Query Refused")
                 st.markdown(f"""
                 <div class="refusal-box">
-                    <strong>Reason for Refusal:</strong><br/>
+                    <strong>Reason:</strong><br/>
                     {response.refusal_reason}
                 </div>
                 """, unsafe_allow_html=True)
-                
                 if response.context_found:
                     st.write(f"**Context found:** {response.context_found}")
                 if response.context_lacking:
                     st.write(f"**Context lacking:** {response.context_lacking}")
-            
-            # 3. Disclaimer and Meta
+
+            # ---- Metadata & Disclaimer ----
             st.markdown("---")
-            st.caption(f"⏱️ **Latency:** {latency:.2f}s | 🧠 **Model:** {response.model_used}")
+            col1, col2 = st.columns(2)
+            with col1:
+                st.caption(f"⏱️ **Latency:** {latency:.2f}s")
+            with col2:
+                st.caption(f"🧠 **Model:** {response.model_used}")
+
             st.caption(f"_{response.clinical_disclaimer}_")
-            
-            # Debug: Full JSON
+
+            # Debug expander
             with st.expander("🛠️ Debug: Raw JSON Response"):
                 st.json(json.loads(response.to_json()))
-                
+
         except Exception as e:
             st.error(f"An error occurred: {str(e)}")
             st.exception(e)
+
+# Footer
+st.markdown("""
+<div class="footer">
+    ⚕️ Disclaimer: This tool provides educational decision support only. Always consult a qualified clinician.
+</div>
+""", unsafe_allow_html=True)
