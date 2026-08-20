@@ -1,5 +1,6 @@
 """
 Streamlit UI for Hypertension RAG + Agent
+Supports multi-turn conversation with the agent.
 """
 
 import streamlit as st
@@ -14,16 +15,12 @@ st.set_page_config(
 )
 
 st.title("💊 Hypertension Clinical Decision Support")
-st.write("""
-Evidence-based hypertension management powered by ESC 2021 Guidelines.
-Ask questions about blood pressure screening, diagnosis, and treatment.
-""")
+st.write("Evidence-based hypertension management powered by ESC 2021 Guidelines.")
 
-# Initialize
+# Initialize RAG and Agent (cached)
 @st.cache_resource
 def load_rag():
-    rag = HypertensionRAGPipeline()
-    return rag
+    return HypertensionRAGPipeline()
 
 @st.cache_resource
 def load_agent(_rag):
@@ -32,58 +29,57 @@ def load_agent(_rag):
 rag = load_rag()
 agent = load_agent(rag)
 
-# Sidebar
+# Sidebar settings
 with st.sidebar:
     st.header("⚙️ Settings")
     use_agent = st.toggle("Use Agent Reasoning", value=True)
-    st.info("💡 Agent reasoning: Ask follow-up questions to personalize results")
+    st.info("💡 Agent reasoning: asks follow-up questions to personalise results")
+    if st.button("🔄 Reset Conversation"):
+        agent.reset()
+        st.session_state.messages = []
+        st.rerun()
 
-# Main UI
-col1, col2 = st.columns([3, 1])
+# Initialize chat history in session state
+if "messages" not in st.session_state:
+    st.session_state.messages = []
 
-with col1:
-    user_input = st.text_area(
-        "Ask about hypertension management:",
-        placeholder="e.g., 'What is the blood pressure target for a 60-year-old with diabetes?'",
-        height=100
-    )
+# Display conversation history
+for msg in st.session_state.messages:
+    with st.chat_message(msg["role"]):
+        st.markdown(msg["content"])
 
-with col2:
-    search_button = st.button("🔍 Search", use_container_width=True, key="search")
+# Chat input
+if prompt := st.chat_input("Ask about hypertension management..."):
+    # Add user message to session
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    with st.chat_message("user"):
+        st.markdown(prompt)
 
-if search_button and user_input:
-    with st.spinner("Searching guidelines..."):
-        if use_agent:
-            # Use agent reasoning
-            response = agent.run(user_input)
-        else:
-            # Use simple RAG
-            rag_response = rag.answer_query(user_input)
-            response = rag_response.format_for_display()
-    
-    st.markdown("---")
-    st.markdown("### 📋 Response")
-    st.write(response)
-    
-    st.info("✅ Information sourced from ESC 2021 Hypertension Guidelines")
+    # Get response from agent or RAG
+    with st.chat_message("assistant"):
+        with st.spinner("Thinking..."):
+            if use_agent:
+                response = agent.run(prompt)
+            else:
+                rag_response = rag.answer_query(prompt)
+                response = rag_response.format_for_display()
+        st.markdown(response)
+
+    # Store assistant message
+    st.session_state.messages.append({"role": "assistant", "content": response})
 
 # Example queries
-st.markdown("---")
 with st.expander("📚 Example Questions"):
     examples = [
         "What is the recommended blood pressure target for patients with diabetes?",
         "How should elderly patients with hypertension be managed?",
         "What are the first-line antihypertensive drugs?",
-        "What lifestyle modifications are recommended for hypertension?",
+        "I'm 62 with diabetes – what's my BP target?",
     ]
     for example in examples:
         if st.button(f"Try: {example}", use_container_width=True):
-            st.session_state['query'] = example
+            st.session_state.messages.append({"role": "user", "content": example})
             st.rerun()
 
-# Footer
 st.markdown("---")
-st.caption("""
-⚠️ **DISCLAIMER**: This tool is for educational purposes. It provides summaries of ESC 2021 guidelines.
-Always consult qualified healthcare professionals for patient-specific decisions.
-""")
+st.caption("⚠️ **DISCLAIMER**: This tool is for educational purposes. Always consult a healthcare professional.")
